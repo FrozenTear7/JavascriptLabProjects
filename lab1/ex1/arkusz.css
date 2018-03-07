@@ -1,32 +1,17 @@
 aside  {
-    background-color: #EFF;
-    border-color: #A8A8A8;
-    border-radius: 10px;
-    border-style: solid;
     text-align: left;
     align-content: right;
     width: 50%;
     float: right;
 }
 footer {
-    border-color: #A8A8A8;
-    border-radius: 10px;
-    border-style: solid;
     text-align: center;
 }
 header {
-    background-color: #EFF;
-    border-color: #A8A8A8;
-    border-radius: 10px;
-    border-style: solid;
     text-align: center;
 }
 
 main {
-    background-color: #EFF;
-    border-color: #A8A8A8;
-    border-radius: 10px;
-    border-style: solid;
     text-align: center;
     align-content: left;
     width: 40%;
@@ -36,11 +21,18 @@ nav {
     margin-right: 25px;
 }
 nav ul {
-    border-color: #A8A8A8;
-    border-radius: 10px;
-    border-style: solid;
     text-align: center;
 }
 nav li {
     display: inline;
+}
+
+.azure {
+    background-color: #EFF;
+}
+
+.border {
+    border-color: #A8A8A8;
+    border-radius: 10px;
+    border-style: solid;
 }
