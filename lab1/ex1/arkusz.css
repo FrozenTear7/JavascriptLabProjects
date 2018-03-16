@@ -1,12 +1,19 @@
-aside  {
+aside {
     text-align: left;
     align-content: right;
     width: 50%;
     float: right;
+    animation: pulsowanie 3s infinite alternate;
+    -webkit-animation: pulsowanie 3s infinite alternate;
+    position: relative;
+    z-index: 0;
 }
+
 footer {
     text-align: center;
+    margin-top: 25px;
 }
+
 header {
     text-align: center;
 }
@@ -15,14 +22,20 @@ main {
     text-align: center;
     align-content: left;
     width: 40%;
+    animation: pulsowanieMain 3s infinite alternate;
+    -webkit-animation: pulsowanieMain 3s infinite alternate;
+    position: relative;
 }
+
 nav {
     margin-left: 25px;
     margin-right: 25px;
 }
+
 nav ul {
     text-align: center;
 }
+
 nav li {
     display: inline;
 }
@@ -33,6 +46,45 @@ nav li {
 
 .border {
     border-color: #A8A8A8;
-    border-radius: 10px;
     border-style: solid;
+}
+
+@keyframes pulsowanie {
+    from {
+        margin-right: 0;
+    }
+    to {
+        margin-right: 500px;
+    }
+}
+
+@-webkit-keyframes pulsowanie {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 500px;
+    }
+}
+
+@keyframes pulsowanieMain {
+    from {
+        margin-left: 0;
+        z-index: -1;
+    }
+    to {
+        margin-left: 500px;
+        z-index: 1;
+    }
+}
+
+@-webkit-keyframes pulsowanieMain {
+    from {
+        margin-left: 0;
+        z-index: -1;
+    }
+    to {
+        margin-left: 500px;
+        z-index: 1;
+    }
 }
