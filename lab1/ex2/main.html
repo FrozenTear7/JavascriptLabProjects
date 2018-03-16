@@ -8,10 +8,6 @@
     <meta http-equiv="x-ua-compatible"
           content="ie=edge">
     <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-    <link rel="stylesheet"
           href="arkusz.css"
           media="screen"
           type="text/css">
@@ -19,6 +15,11 @@
           href="w3.css"
           media="screen"
           type="text/css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script defer
             src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <title>
@@ -27,21 +28,25 @@
 </head>
 <body>
 
-<div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#news">News</a>
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+<div class="w3-container">
+    <div class="w3-bar w3-yellow">
+        <div class="w3-dropdown-hover">
+            <i class="fa fa-home"></i>
+            <button class="w3-button w3-yellow">Komputery</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">Chińskie</a>
+                <a href="#" class="w3-bar-item w3-button">Markowe</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button w3-yellow">Akcesoria</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">Chińskie</a>
+                <a href="#" class="w3-bar-item w3-button">Markowe</a>
+            </div>
         </div>
     </div>
 </div>
-
 
 <main>
     <div class="container-fluid">
