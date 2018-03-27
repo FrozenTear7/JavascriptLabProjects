@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Exercise 2
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="#">Wprowadzenie</a>
+                    <a class="dropdown-item active" href="#">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="#">Narzędzia edycji</a>
+                    <a class="dropdown-item" href="#">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="#">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="#">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="#">Rejestr zasięgu</a>
+                    <a class="dropdown-item" href="#">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="#">Przybory</a>
+                    <a class="dropdown-item" href="#">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>PODSTAWOWA EDYCJA</h2>
+    <p>W tej sekcji opisano minimalny przepływ pracy przy tworzeniu filmu przy użyciu tylko jednej ścieżki.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Tworzenie_nowego_projektu">Tworzenie nowego projektu</a></li>
+        <li class="list-group-item"><a href="#Dodawanie_i_usuwanie_nowych_sekwencji">Dodawanie i usuwanie nowych
+            sekwencji</a></li>
+        <li class="list-group-item"><a href="#Praca_z_plikami_multimedialnymi">Praca z plikami multimedialnymi</a></li>
+        <li class="list-group-item"><a href="#Praca_z_pojemnikami">Praca z pojemnikami</a></li>
+    </ul>
+
+    <br/>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Przewijanie_osi_czasu_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Przewijanie osi czasu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Przewijanie_osi_czasu">Przewijanie osi czasu</a>
+            <a class="dropdown-item" href="#Korzystanie_z_osi_czasu">Korzystanie z osi czasu</a>
+            <a class="dropdown-item" href="#Powiększanie_osi_czasu">Powiększanie osi czasu</a>
+            <a class="dropdown-item" href="#Zmiana_bieżącej_klatki">Zmiana bieżącej klatki</a>
+            <a class="dropdown-item" href="#Zmiana_bieżącej_klatki_gdy_klip">Zmiana bieżącej klatki, gdy klip jest
+                wyświetlany na monitorze</a>
+            <a class="dropdown-item" href="#Przełączanie_między_osią">Przełączanie między osią czasu a klipem
+                wyświetlacza</a>
+            <a class="dropdown-item" href="#Ustawianie_aktywnych_ścieżek">Ustawianie aktywnych ścieżek</a>
+            <a class="dropdown-item" href="#Efekty_stanu_aktywnego_śledzenia">Efekty stanu aktywnego śledzenia</a>
+
+            <a class="dropdown-item" href="#Wybór_pojedynczego_klipu">Wybór pojedynczego klipu</a>
+            <a class="dropdown-item" href="#Zaznaczenie_wielu_klipów">Zaznaczanie wielu klipów na tej samej
+                ścieżce</a>
+            <a class="dropdown-item" href="#Odznaczanie_wszystkich_klipów">Odznaczanie wszystkich klipów</a>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Dodawanie_klipów_do_sekwencji_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dodawanie klipów do sekwencji
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Dodawanie_klipów_do_sekwencji">Dodawanie klipów do sekwencji</a>
+            <a class="dropdown-item" href="#Drag_n_drop">Drag'n'Drop</a>
+            <a class="dropdown-item" href="#Z_monitora">Z monitora</a>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Edytowanie_klipów_na_osi_czasu_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edytowanie klipów na osi czasu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Edytowanie_klipów_na_osi_czasu">Edytowanie klipów na osi czasu</a>
+            <a class="dropdown-item" href="#Przycinanie_klipów">Przycinanie klipów</a>
+            <a class="dropdown-item" href="#Przenoszenie_klipów">Przenoszenie klipów</a>
+            <a class="dropdown-item" href="#Wycinanie_klipów">Wycinanie klipów</a>
+            <a class="dropdown-item" href="#Usuwanie_klipów">Usuwanie klipów</a>
+        </div>
+    </div>
+
+    <br/>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Renderowanie_filmu_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Renderowanie filmu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Renderowanie_filmu">Renderowanie filmu</a>
+            <a class="dropdown-item" href="#Wybór_parametrów">Wybór parametrów</a>
+            <a class="dropdown-item" href="#Wyjście_renderowania">Wydajność renderowania</a>
+        </div>
+    </div>
+
+    <br/>
+
+    <br/><br/><br/>
+
+    <div id="Tworzenie_nowego_projektu">
+        <h4>TWORZENIE NOWEGO PROJEKTU</h4>
+
+        <p>Flowblade Movie Editor zapisuje pracę w plikach projektu.</p>
+
+        <p>Aby utworzyć nowy projekt:</p>
+
+        <ul>
+            <li><b>Menu:</b> Wybierz <b>Plik -> Nowy</b> z menu.</li>
+            <li><b>Skrót klawiszowy:</b> Naciśnij <b>Ctrl + N</b> .</li>
+        </ul>
+
+        <p>Projekt zawiera:</p>
+
+        <ul>
+            <li>jedna lub więcej sekwencji edytowanych mediów</li>
+            <li>zbiór plików multimedialnych przechowywanych w pojemnikach.</li>
+        </ul>
+
+        <p>Istnieją dwa parametry, które można wybrać dla nowego projektu:</p>
+
+        <p><b>Profil projektu Profil</b> projektu określa liczbę klatek na sekundę, rozmiar obrazu w pikselach
+            i proporcje
+            pikseli.</p>
+        <p><b>Liczba utworów</b> Wybierz liczbę ścieżek wideo i audio użytych w projekcie. Można to zmienić
+            później, ale
+            operacja
+            niszczy stos Cofnij / Ponów i wszystkie Klipy osi czasu, które nie pasują do nowo utworzonej wersji
+            Sekwencji.</p>
+
+        <div class="jumbotron">
+            Materiał wideo jest wewnętrznie skalowany do wymiarów profilu, dlatego wybór profilu projektu z mniejszymi
+            wymiarami pikseli niż renderowane wyjście prowadzi do obniżenia jakości.
+        </div>
+
+        <div class="jumbotron">
+            Flowblade Movie Editor wewnętrznie obsługuje dane obrazu jako ramki YUV420, więc kodowanie powiązane z danym
+            profilem nie ma wpływu na jakość przed renderowaniem.
+        </div>
+
+        <div class="jumbotron">
+            Dla <b>możliwie najlepszej jakości materiału wejściowego, profilu projektu i renderowania
+            Profil</b> powinien <b>mieć
+            te same wymiary pikseli</b> i proporcje pikseli.
+        </div>
+    </div>
+
+    <div id="Dodawanie_i_usuwanie_nowych_sekwencji">
+        <h4>DODAWANIE I USUWANIE NOWYCH SEKWENCJI</h4>
+
+        <p>Projekt zawiera jedną lub więcej Sekwencji. Termin Sekwencja odnosi się do pełnej zawartości osi czasu
+            tworzącej program, film.</p>
+
+        <p>W przypadku złożonych projektów czasami najlepiej jest używać wielu sekwencji do tworzenia różnych części
+            gotowego produktu i zarządzania nimi.</p>
+
+        <p>Użyj przycisków <b>Dodaj</b> i <b>Usuń</b> w zakładce <b>Projekt</b> panel
+            <b>Sekwencje</b>. Wszystkie sekwencje używają tego samego
+            profilu.</p>
+
+        <p>Tworząc nową sekwencję, możesz wybrać liczbę ścieżek w sekwencji. Można to zmienić później, ale operacja
+            niszczy stos Cofnij / Ponów i wszystkie Klipy osi czasu, które nie pasują do nowo utworzonej wersji
+            Sekwencji.</p>
+    </div>
+
+    <div id="Praca_z_plikami_multimedialnymi">
+        <h4>PRACA Z PLIKAMI MULTIMEDIALNYMI</h4>
+
+        <p>Flowblade Movie Editor przechowuje pliki na karcie <b>Media</b>. Pliki znajdują się w nienazwanej
+            tabeli, która
+            wyświetla zawartość aktualnie wybranego pojemnika. Pojemniki są wymienione w tabeli <b>Bins</b>.
+        </p>
+
+        <p>Otwieranie plików multimedialnych:</p>
+
+        <ol>
+            <li>Naciśnij przycisk <b>Dodaj</b> nad nienazwaną tabelą zawartości pojemnika na karcie
+                <b>Media</b>.
+            </li>
+            <li>Użyj okna dialogowego, aby znaleźć i wybrać pliki.</li>
+            <li>Pliki są wyświetlane jako miniatury.</li>
+            <li>Zauważ, że tworzenie miniatur otwieranych plików zajmie trochę czasu.</li>
+        </ol>
+
+        <div class="jumbotron">
+            <h3>MEDIA PROJEKTU: ŚCIEŻKI BEZWZGLĘDNE I WZGLĘDNE</h3>
+
+            <ul>
+                <li>Flowblade <b>zapisuje odwołania</b> do plików multimedialnych używanych w projekcie jako
+                    <b>ścieżki
+                        bezwzględne</b>.
+                </li>
+                <li>Jeśli nośnik <b>nie</b> zostanie <b>znaleziony podczas ładowania,</b> Flowblade
+                    spróbuje znaleźć plik
+                    multimedialny o tej samej nazwie w podfolderach względem pliku projektu.
+                </li>
+                <li>Jeśli wszystkie media używane przez projekt są zapisywane w podfolderach w odniesieniu do pliku
+                    projektu, plik <b>projektu i nośnik można przenieść jako jednostkę,</b> a projekt zostanie
+                    pomyślnie
+                    załadowany po skopiowaniu danych do innego miejsca.
+                </li>
+                <li><b>Renderowane pliki,</b> takie jak przejścia, <b>są domyślnie zapisywane w ukrytym
+                    folderze</b>
+                    /.flowblade/rendered_clips/.
+                </li>
+                <li>Element menu <b>Plik-> Zapisz kopię zapasową migawki...</b> zapisuje plik projektu,
+                    wszystkie pliki
+                    multimedialne i wyrenderowane w jednym folderze, który można zapisać jako jednostkę, a projekt można
+                    zawsze załadować za pomocą tych danych.
+                </li>
+                <li>
+                    <b>Kolejność ładunków</b> pomiędzy ścieżkami bezwzględnymi i względnymi można ustawić w
+                    oknie preferencji.
+                </li>
+                <li>
+                    Do naprawienia problemów, które mogą wystąpić, można <b>użyć</b> narzędzia <b>Media
+                    Relinker</b>.
+                </li>
+            </ul>
+
+            <p><b>UWAGA:</b> podane tutaj informacje dotyczą tylko wersji 0.18 i wyższych.</p>
+        </div>
+    </div>
+
+    <div id="Praca_z_pojemnikami">
+        <h4>PRACA Z POJEMNIKAMI</h4>
+
+        <p>Podczas edycji wideo pojemnik jest miejscem przechowywania mediów. Termin używany jest w Avid i był wcześniej
+            używany przez redaktorów filmowych.</p>
+
+        <p>W przypadku małych projektów zwykle używanie skrzynek nie jest potrzebne i można ukryć panel Skrzynka,
+            przeciągając uchwyt między panelami.</p>
+
+        <ul class="list-no-bullets">
+            <li>Dodawanie kosza : Naciśnij przycisk Dodaj powyżej tabeli Bins.</li>
+            <li>Usuwanie pojemnika : Naciśnij przycisk Usuń nad tabelą Pojemniki. Przed usunięciem kosz musi być pusty.
+                Projekt musi zawsze mieć co najmniej jeden pojemnik.
+            </li>
+            <li>Zmiana nazwy pojemnika : kliknij dwukrotnie nazwę pojemnika.</li>
+            <li>Przenoszenie plików do innego odbiornika : przeciągnij pliki na wierzch ikony kosza.</li>
+        </ul>
+    </div>
+
+    <div id="Korzystanie_z_osi_czasu">
+        <h4>KORZYSTANIE Z OSI CZASU</h4>
+
+        <div id="Przewijanie_osi_czasu">
+            <h4>Przewijanie osi czasu</h4>
+            <ul>
+                <li>Naciśnij i przeciągnij <b> Pasek przewijania </b> poniżej Oś czasu</li>
+                <li>Przewiń klawisz <b> Środek myszy </b> + klawisz <b> CTRL </b> na szczycie osi czasu</li>
+            </ul>
+        </div>
+
+        <div id="Powiększanie_osi_czasu">
+            <h4> Powiększanie osi czasu </h4>
+            <ul>
+                <li> Kliknij przyciski <b> Powiększ </b>, <b> Pomniejsz </b> lub <b> Długość powiększenia </b>.
+                </li>
+                <li> Przewiń przycisk <b> Środek myszy </b> u góry osi czasu</li>
+            </ul>
+        </div>
+
+        <div id="Zmiana_bieżącej_klatki">
+            <h4> Zmiana bieżącej klatki </h4>
+            <ul>
+                <li> Przeciągnij za pomocą przycisku <b> Prawy przycisk myszy </b>, rozpoczynając od pustego
+                    miejsca na osi
+                    czasu.
+                </li>
+                <li> Przeciągnij za pomocą przycisku <b> Lewy przycisk myszy </b> w Skali ramki.</li>
+                <li> Przeciągnij za pomocą <b> Lewej myszy </b> na pasku pozycji monitora.</li>
+                <li> Kliknij przycisk <b> Strzałka w lewo </b> lub klawisz <b> Strzałka w prawo </b>, aby
+                    przejść do
+                    następnej lub poprzedniej klatki.
+                </li>
+                <li> Kliknij przycisk <b> Strzałka w górę </b> lub przycisk <b> Strzałka w dół </b>, aby przejść
+                    do
+                    następnego lub poprzedniego wycięcia na najwyższym aktywnym utworze.
+                </li>
+                <li> Kliknij przycisk <b> Dalej </b> lub <b> Poprzedni </b> w obszarze Przyciski monitora, aby
+                    przejść do
+                    następnej lub poprzedniej klatki.
+                </li>
+            </ul>
+        </div>
+
+        <div id="Zmiana_bieżącej_klatki_gdy_klip">
+            <h4> Zmiana bieżącej klatki, gdy klip jest wyświetlany na monitorze </h4>
+            <ul>
+                <li> Przeciągnij za pomocą <b> Lewej myszy </b> na pasku pozycji monitora.</li>
+                <li> Kliknij przycisk <b> Strzałka w lewo </b> lub klawisz <b> Strzałka w prawo </b>, aby
+                    przejść do
+                    następnej lub poprzedniej klatki.
+                </li>
+                <li> Kliknij przycisk <b> Strzałka w górę </b> lub przycisk <b> Strzałka w dół </b>, aby przejść
+                    do
+                    następnej lub poprzedniej z następujących czynności: Zaznacz / Wytnij / Uruchom / Zakończ
+                </li>
+                <li> Kliknij przycisk <b> Dalej </b> lub <b> Poprzedni </b> w obszarze Przyciski monitora, aby
+                    przejść do
+                    następnej lub poprzedniej klatki.
+                </li>
+            </ul>
+        </div>
+
+        <div id="Przełączanie_między_osią">
+            <h4> Przełączanie między osią czasu a klipem wyświetlacza </h4>
+            <ul>
+                <li> Kliknij przyciski z ikonami reprezentującymi sekwencję lub pojedynczy klip w obszarze
+                    Przyciski
+                    monitora.
+                </li>
+                <li> Przeciągnij plik multimedialny na <b> Monitor </b>, aby wyświetlić Klip.</li>
+            </ul>
+        </div>
+
+        <div id="Ustawianie_aktywnych_ścieżek">
+            <h4> Ustawianie aktywnych ścieżek </h4>
+            <ul>
+                <li> Kliknij przycisk <b> Śledź aktywny przełącznik </b> po prawej stronie obszaru Kolumna
+                    ścieżek.
+                    Najwyższy <b> Przełącznik śledzenia ruchu </b> wyświetla strzałkę skierowaną w dół,
+                    wskazując, że <b>
+                        Wstaw z monitora </b> i inne przyciski umieszczają klipy na tym utworze.
+                </li>
+            </ul>
+        </div>
+
+        <div id="Efekty_stanu_aktywnego_śledzenia">
+            <div class="jumbotron">
+                <h4> Efekty stanu aktywnego śledzenia </h4>
+                <ul>
+                    <li> Cięcia są wykonywane tylko na aktywnych ścieżkach.</li>
+                    <li> Wstawianie pliku multimedialnego, który jest aktualnie wyświetlany w Monitorze za
+                        pomocą przycisków
+                        <b> Wstaw z monitora, Dołącz z monitora </b> lub <b> Trzypunktowe przyciski
+                            Ovewrite </b>
+                        umieszcza klip na najbardziej aktywnej ścieżce wskazanej przez ikona strzałki.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="Wybór_pojedynczego_klipu">
+            <h4> Wybór pojedynczego klipu </h4>
+            <ul>
+                <li> Kliknij klip za pomocą przycisku <b> Lewej myszy </b>.</li>
+            </ul>
+        </div>
+
+        <div id="Zaznaczenie_wielu_klipów">
+            <h4> Zaznaczanie wielu klipów na tej samej ścieżce </h4>
+            <ul>
+                <li> Kliknij klip za pomocą przycisku <b> Lewej myszy </b>.</li>
+                <li> Kliknij inny klip na tej samej ścieżce za pomocą przycisku <b> Sterowanie + lewy przycisk
+                    myszy </b>.
+                </li>
+                <li> Zostaną wybrane wszystkie klipy między klikniętymi klipami.</li>
+            </ul>
+        </div>
+
+        <div id="Odznaczanie_wszystkich_klipów">
+            <h4> Odznaczanie wszystkich klipów </h4>
+            <ul>
+                <li> Kliknij tło obszaru osi czasu.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Dodawanie_klipów_do_sekwencji">
+        <h3> Dodawanie klipów do sekwencji </h3>
+
+        <div id="Drag_n_drop">
+            <h4> Drag'n'Drop </h4>
+            <ul>
+                <li> Naciśnij plik multimedialny na karcie <b> Media </b> i przeciągnij go na ścieżkę, na której chcesz
+                    go
+                    umieścić.
+                </li>
+
+                <li><i> Opcja "Zastąp puste" </i> jest wybierana jako preferowana akcja "przeciągnij i upuść":</li>
+                <ul>
+                    <li> Na ścieżce klip V1 zostanie wstawiony na ścieżce przy najbliższym przycięciu.</li>
+                    <li> Na ścieżkach innych niż V1 :.</li>
+                    <ul>
+                        <li> Klip zostanie wstawiony, jeśli zostanie upuszczony na klip.</li>
+                        <li> Klip zastąpi dostępne puste i puste miejsce i wykona wstawienie dla długości klatek, które
+                            zostaną nadpisane.
+                        </li>
+                    </ul>
+                </ul>
+                <li><i> "Zawsze wstawiaj" </i> jest wybierane jako preferencja dla działania przeciągnij i upuść:</li>
+                <ul>
+                    <li> Klip zostanie wstawiony na ścieżce przy najbliższej linii cięcia.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="Z_monitora">
+            <h4> Z monitora </h4>
+            <ol>
+                <li> Otwórz klip w Monitorze za pomocą:</li>
+                <ul>
+                    <li> dwukrotne kliknięcie ikony miniatury,</li>
+                    <li> przeciąganie pliku multimedialnego na monitor lub</li>
+                    <li> wybranie pozycji <b> Otwórz w monitorze </b> z menu kontekstowego <b> Prawy przycisk myszy </b>.
+                    </li>
+                </ul>
+                <li> Wybierz zakres insertów</li>
+                <ul>
+                    <li> Użyj przycisków <b> Oznacz jako </b> i <b> Zaznacz jako </b>, aby wybrać zakres.</li>
+                    <li> Użyj przycisków <b> I </b> i <b> O </b>, aby ustawić zakres.</li>
+                    <li> Jeśli zakres nie zostanie ustawiony, zostanie wstawiona pełna długość klipu.</li>
+                </ul>
+                <li> Naciśnij przycisk <b> Wstaw z monitora </b></li>
+                <ul>
+                    <li> Klip zostanie wstawiony na pierwszej aktywnej ścieżce w punkcie cięcia najbliższym aktualnie
+                        wyświetlanej klatki. Pierwsza aktywna ścieżka jest oznaczona strzałką w dół na ścieżce Aktywny
+                        przełącznik.
+                    </li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+
+    <div id="Edytowanie_klipów_na_osi_czasu">
+        <h3> Edytowanie klipów na osi czasu </h3>
+        <p>
+            Po umieszczeniu klipów na osi czasu w celu utworzenia sekwencji, prawdopodobnie trzeba będzie zawęzić cięcia
+            między klipami.
+        </p>
+
+        <div id="Przycinanie_klipów">
+            <h4> Przycinanie klipów </h4>
+            <p>
+                Użyj <a href="edit_tools.html#trim"> narzędzia przycinania </a>, <a href="edit_tools.html#roll">
+                narzędzia
+                Roll </a> lub <a href="edit_tools.html # slip"> Narzędzie Slip </a>
+            </p>
+        </div>
+
+        <div id="Przenoszenie_klipów">
+            <h4> Przenoszenie klipów </h4>
+            <p>
+                Użyj narzędzia <a href="edit_tools.html#insert"> Narzędzie wstawiania </a>, <a
+                    href="edit_tools.html#overwrite"> Narzędzie zastępowania </a> lub <a
+                    href="edit_tools.html # spacer">
+                Narzędzie Spacer </a>
+            </p>
+        </div>
+
+        <div id="Wycinanie_klipów">
+            <h4> Wycinanie klipów </h4>
+            <ol>
+                <li> Wybierz wyciętą klatkę</li>
+                <ul>
+                    <li> Wycinanie odbywa się zawsze przed aktualnie wyświetlaną ramką na wszystkich aktywnych
+                        ścieżkach.
+                    </li>
+                </ul>
+                <li> Wytnij klip</li>
+                <ul>
+                    <li> Naciśnij przycisk <b> Wytnij </b> lub naciśnij <b> X </b> na klawiaturze.</li>
+                </ul>
+            </ol>
+        </div>
+
+        <div id="Usuwanie_klipów">
+            <h4> Usuwanie klipów </h4>
+            <p><b> Splice Out </b>: zaznacz klip (y) i naciśnij klawisz <b> Usuń </b> lub użyj przycisku <b> Splice
+                Out </b>
+                na środkowym pasku. Wszystkie klipy na ścieżce po usuniętych klipach są przesuwane w lewo, aby zakryć
+                utworzoną pustą przestrzeń. Niektóre edytory wywołują tę operację <i> Ripple Delete </i>. </p>
+            <p><b> Podnieś </b>: wybierz klip (y) i naciśnij przycisk <b> Podnieś </b> na środkowym pasku. Klip zostanie
+                zastąpiony pustym miejscem, jeśli znajduje się w środku ścieżki. Pozostałe klipy na ścieżce nie są
+                przenoszone.
+            <p><b> Usunięcie osłony przejścia / przesuwania </b>: wybierz pojedynczy wytopiony klip przejściowy i
+                naciśnij
+                klawisz <b> Usuń </b>. Jeśli klipy przed i po usuniętym klipie mają dostępne klatki, to przestrzeń
+                pozostawiona przez usunięty klip zostanie pokryta materiałem z sąsiednich klipów. Jeśli materiał nie
+                jest
+                dostępny, zostanie wykonane spleszczenie. Preferowane jest zawsze wykonywanie splotów na zanikach i
+                przejściach.
+            </p>
+
+            <div class="jumbotron">
+                <b> Użyj skrótów klawiaturowych! </b> Znacznie szybciej jest użyć klawisza <b> X </b> do wycinania
+                klipów i
+                klawisza <b> Usuń </b>, aby ułożyć klipy, niż użyć przycisków te same operacje.
+            </div>
+        </div>
+    </div>
+
+    <div id="Renderowanie_filmu">
+        <h3> Renderowanie filmu </h3>
+
+        <div id="Wybór_parametrów">
+            <h4> Wybór parametrów </h4>
+            <ul>
+                <li><b> Przycisk wyboru folderu Przycisk </b> powoduje wybranie folderu, w którym zostanie umieszczony
+                    renderowany plik.
+                </li>
+                <li><b> Nazwa </b> widżet wpisu zapewnia możliwość ustawienia nazwy pliku wyjściowego.</li>
+                <li> Użyj <b> Format kodowania </b> i rozwijanego menu <b> Jakość </b>, aby wybrać typ pliku do
+                    wyrenderowania.
+                </li>
+            </ul>
+        </div>
+
+        <div id="Wyjście_renderowania">
+            <h4> Wyjście renderowania </h4>
+            <ol>
+                <li> Naciśnij przycisk <b> Renderuj </b>, aby rozpocząć renderowanie.</li>
+                <li> Zostanie otwarte okno renderowania wyświetlające informacje o ścieżce pliku renderowania,
+                    szacowanym
+                    czasie pozostałym do zakończenia, czasie renderowania i widżecie paska postępu.
+                </li>
+                <li> Po zakończeniu renderowania okno Renderowanie zamknie się automatycznie.</li>
+            </ol>
+        </div>
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

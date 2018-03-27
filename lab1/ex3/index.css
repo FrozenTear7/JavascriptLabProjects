@@ -1,0 +1,28 @@
+.navbar-flowblade {
+    background-color: #457ad1;
+}
+
+.link-group {
+    margin: auto;
+    width: 30%;
+}
+
+.index-main {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.index-main-left {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.list-no-bullets {
+    list-style-type: none;
+}
