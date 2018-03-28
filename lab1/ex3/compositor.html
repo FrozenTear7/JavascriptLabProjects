@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item active" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>TWORZENIE ZŁOŻONYCH OBRAZÓW</h2>
+
+    <p>Edytor filmów Flowblade wykorzystuje Compositors do miksowania obrazów z dwóch różnych ścieżek. Łącząc wiele
+        ścieżek i wielu Kompozytorów, można uzyskać złożone obrazy złożone.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Wprowadzenie">Wprowadzenie</a></li>
+        <li class="list-group-item"><a href="#Workflow_Compositor">Workflow Compositor</a></li>
+        <li class="list-group-item"><a href="#Compositor_są_wykonywane">Compositor są wykonywane od góry do dołu</a>
+        </li>
+        <li class="list-group-item"><a href="#Rendering_a_composited_frame">Rendering A Composited Frame</a></li>
+        <li class="list-group-item"><a href="#Przykład_tworzenie_3_warstwowego_kompozytu">PRZYKŁAD: Tworzenie
+            3-warstwowego kompozytu</a></li>
+        <li class="list-group-item"><a href="#Elementy_multimedialne_i_pożądany_wynik">Elementy multimedialne i pożądany
+            wynik</a></li>
+        <li class="list-group-item"><a href="#Kolejność_warstw_stylu_Gimp">Kolejność warstw w stylu Gimp / Photoshop
+            daje zły wynik</a></li>
+        <li class="list-group-item"><a href="#Popraw_kolejność_warstw">Popraw kolejność warstw, gdy kolejność kompozycji
+            jest od góry do dołu</a></li>
+    </ul>
+
+    <div id="Wprowadzenie">
+        <h3> Wprowadzenie </h3>
+        <p>
+            Kompozytory mają ścieżkę źródłową i docelową. </p>
+        <p>
+              Na osi czasu Compositor jest wyświetlany jako ciemny prostokątny obiekt, który jest wyświetlany na górze
+            dwóch ścieżek. Ścieżka źródłowa to zawsze ta powyżej Kompozytora, ale Ścieżka celu może być dowolną z
+            poniższych ścieżek.
+        </p>
+        <p>
+            Parametry definiujące wynikowy kompozyt edytowane są w zakładce <b> Compositors </b>.
+        </p>
+        <p>
+            Istnieje podtyp Compositors o nazwie Blendery.
+            Blendery wykorzystują standardowe mieszanki, takie jak Add, Softlight i Darken,
+            ale nie oferują żadnych transformacji, ani żadnej metody kontrolowania ilości mieszanki.
+        </p>
+    </div>
+
+    <div id="Workflow_Compositor">
+        <h3> Workflow Compositor </h3>
+        <ol>
+            <li> Tworzenie Compositor
+                <ul>
+                    <li> Kliknij <b> Prawy przycisk myszy </b> na dowolnym klipie na ścieżkach od V5 do V2 i wybierz na
+                        przykład <b> Dodaj Compositor -> Dissolve </b> lub <b> Dodaj Blender -> Softlight </b> z
+                        popupmenu, aby utworzyć nowego Compositor.
+                    </li>
+                </ul>
+            <li> Trimmimg lub przenoszenie Compositor</li>
+            <ul>
+                <li> Aby przyciąć punkt początkowy i końcowy Compositora: Naciśnij i przeciągnij <b> Lewą Mysz </b> przy
+                    dowolnym końcu Kompozytora na Osi czasu.
+                </li>
+                <li> Aby przenieść Compositor: Naciśnij i przeciągnij <b> Left Mouse </b> w środku Compositor na osi
+                    czasu.
+                </li>
+            </ul>
+            <li> Edycja parametrów Compositor na karcie Compositors</li>
+            <ul>
+                <li> Kliknij dwukrotnie Compositor za pomocą <b> lewej myszy </b>.</li>
+                <li> Kliknij przycisk <b> Prawy przycisk myszy </b> na dowolnym komponencie Compositor i wybierz opcję
+                    Otwórz w edytorze Compositor
+                </li>
+                <li> Edytuj parametry za pomocą edytorów wartości.</li>
+            </ul>
+            <li> Usuwanie Compositor</li>
+            <ul>
+                <li> Kliknij przycisk <b> Lewa mysz </b> na dowolnym komponencie Compositor, aby go wybrać, a następnie
+                    naciśnij przycisk <b> Usuń </b>.
+                </li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Compositor_są_wykonywane">
+        <h3> Compositor są wykonywane od góry do dołu </h3>
+        W edytorze filmów Flowblade <b> kolejność renderowania jest od góry do dołu </b>,
+        zamiast z dołu do góry, jak w Gimp lub Photoshop.
+
+        Podczas próby określonego typu wielowarstwowych kompozytów daje to wyniki, które wydają się nieintuicyjne,
+        chyba że użytkownik jest świadomy renderowania kolejności Compositors.
+    </div>
+
+    <div id="Rendering_a_composited_frame">
+        <h4> Rendering A Composited Frame </h4>
+        <ol>
+            <li> Dla każdej klatki sprawdza się, czy na najwyższej ścieżce znajduje się Kompozytor pokrywający tę
+                ramkę.
+            </li>
+            <li> Jeśli zostanie znaleziony taki Compositor, wykonaj kompozyt na torze docelowym.</li>
+            <li> Ramka na torze docelowym została zmieniona i jeśli ta ramka jest używana jako źródło, używana jest
+                zmieniona wersja
+            </li>
+            <li> Sprawdź, czy klatka na następnej ścieżce poniżej ma komponent i jeśli odnajdziesz Compositor, zrób
+                złożony obraz
+            </li>
+            <li> Odbywa się to dla każdej ścieżki.</li>
+            <li> Obraz wyjściowy jest z najwyższej ścieżki, która ma nośnik na ramie i nie ma kompostora na ramie.</li>
+        </ol>
+    </div>
+
+    <div id="Przykład_tworzenie_3_warstwowego_kompozytu">
+        <h3> PRZYKŁAD: Tworzenie 3-warstwowego kompozytu </h3>
+        <p style="margin-bottom: 45px">
+            W tym przykładzie demonstrujemy, w jaki sposób Compositor od góry do dołu
+            zamówienie wpływa na kompozycję. Staramy się, aby słowo "GO" pojawiło się na 2-kolorowym
+            tło wykonane przez połączenie czerwonych i niebieskich klipów kolorystycznych za pomocą funkcji "Free
+            Stripes".
+        </p>
+    </div>
+
+    <div id="Elementy_multimedialne_i_pożądany_wynik">
+        <h4> Elementy multimedialne i pożądany wynik </h4>
+        <p>
+            Aby uzyskać przezroczystość alfa, grafika GO.PNG musi być skomponowana za pomocą funkcji "Dissolve".
+        </p>
+        <p>
+            <i> <b> Klipy: RED i NIEBIESKI klip kolorów i grafika GO.PNG z przezroczystością alfa </b> </i>
+        </p>
+        <img src="comp_clips.png">
+
+        <p>
+            <i> <b> Żądany wynik </b> </i>
+        </p>
+
+        <img style="margin-bottom: 45px" src="correct_comp.png">
+    </div>
+
+    <div id="Kolejność_warstw_stylu_Gimp">
+        <h4> Kolejność warstw stylu Gimp / Photoshop daje zły wynik </h4>
+        <p>
+            Tutaj rozmieściliśmy klipsy na torach, ponieważ układaliśmy warstwy w Gimpie.
+        </p>
+        <p>
+            <i> <b> Kolejność warstw stylu Gimp </b> </i>
+        </p>
+        <img src="wrong_timeline.png">
+
+        <p>
+            To, co dzieje się tutaj, polega na tym, że pierwszy "GO.PNG" jest połączony z klipem kolorowym "RED", a
+            wynikowy obraz jest łączony za pomocą "Free Stripes" na wierzchu "BLUE" Kolorowego klipu. Otrzymujemy zły
+            wynik.
+        </p>
+        <p>
+            <i> <b> Zły wynik </b> </i>
+        </p>
+        <img style="margin-bottom: 45px" src="wrong_comp.png">
+    </div>
+
+    <div id="Popraw_kolejność_warstw">
+        <h4> Popraw kolejność warstw, gdy kolejność kompozycji jest od góry do dołu </h4>
+        <p>
+            Tutaj ułożyliśmy klipy w odpowiedniej kolejności dla pożądanego rezultatu.
+        </p>
+        <p>
+            <i> <b> Poprawna kolejność warstw </b> </i>
+        </p>
+        <img src="correct_timeline.png">
+        <p>
+            Tutaj klip koloru "RED" jest najpierw łączony za pomocą "Free Stripes" w "BLUE" Color Clip. Następnie
+            "GO.PNG" jest umieszczany na wierzchu wynikowego obrazu (który jest już renderowany na ścieżce V1) za pomocą
+            funkcji "Dissolve", aby uzyskać ostateczny obraz wyjściowy.
+        </p>
+        <p>
+            <i> <b> Ścieżka docelowa w kompilatorze "Region" to V1, ścieżka źródłowa to V3 </b> </i>
+        </p>
+
+        <img src="correct_dest.png">
+
+
+        <p>
+            <i> <b> Żądany wynik </b> </i>
+        </p>
+
+        <img style="margin-bottom: 45px" src="correct_comp.png">
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

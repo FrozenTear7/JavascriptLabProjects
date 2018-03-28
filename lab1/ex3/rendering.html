@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item active" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>WYKONANIE</h2>
+
+    <p>W Flowblade istnieją dwa sposoby renderowania danych wyjściowych:</p>
+
+    <ul>
+        <li><b>Panel renderowania</b> w lewym górnym notesie w głównym oknie.</li>
+        <li>Aplikacja <b>kolejki Renderowanie wsadowe ,</b> którą można uruchomić z menu Renderowanie.</li>
+    </ul>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Panel_renderowania">Panel renderowania</a></li>
+        <li class="list-group-item"><a href="#Widżety">Widżety</a></li>
+        <li class="list-group-item"><a href="#Wydajność_renderowania">Wydajność renderowania</a></li>
+        <li class="list-group-item"><a href="#Kolejka_Renderowania_wsadowego">Kolejka Renderowania wsadowego</a></li>
+        <li class="list-group-item"><a href="#Dodawanie_pozycji_do_kolejki_Renderowanie_wsadowe">Dodawanie pozycji do
+            kolejki Renderowanie wsadowe</a></li>
+        <li class="list-group-item"><a href="#Korzystanie_z_kolejki_Renderowanie_wsadowe">Korzystanie z kolejki
+            Renderowanie wsadowe</a></li>
+        <li class="list-group-item"><a href="#Renderowanie_za_kulisami_MLT_i_libavformat_FFMpeg">Renderowanie za
+            kulisami: MLT i libavformat (FFMpeg)</a></li>
+        <li class="list-group-item"><a href="#Flowblade_rendering_pipeline">Flowblade rendering pipeline</a></li>
+    </ul>
+
+    <div id="Panel_renderowania">
+        <h3> Panel renderowania </h3>
+
+
+    </div>
+
+    <div id="Widżety">
+        <h4> Widżety </h4>
+        <h5><b> Folder </b> przycisk wyboru </h5>
+        <div class="r-widget"> Wybierz folder, w którym chcesz umieścić plik wyjściowy.</div>
+        <h5><b> Nazwa </b> widget wprowadzania </h5>
+        <div class="r-widget"> Ustaw nazwę pliku wyjściowego.</div>
+        <h5><b> Typ </b> menu rozwijanego </h5>
+        <div class="r-widget"> Wybierz między renderowaniem z parametrem zdefiniowanym przez użytkownika lub użyj
+            gotowych parametrów wyświetlania i typów plików.
+        </div>
+        <h5><b> Menu rozwijane ustawień </b></h5>
+        <div class="r-widget"> Wybierz gotowe parametry renderowania i typ pliku.</div>
+        <h5><b> Użyj profilu projektu </b> pole wyboru </h5>
+        <div class="r-widget"> Usuń zaznaczenie, aby wybrać inny, niż profil projektu, który będzie używany do
+            renderowanego wideo.
+        </div>
+        <h5><b> Menu rozwijane profilu </b></h5>
+        <div class="r-widget"> Wybierz profil projektu do renderowania</div>
+        <h5> Menu rozwijane <b> Kodowanie / Typ </b></h5>
+        <div class="r-widget"> Wybierz kodowanie i format kontenera do renderowania.</div>
+        <h5><b> Menu rozwijane przepływności </b></h5>
+        <div class="r-widget"> Wybierz bitrate do renderowania.</div>
+        <h5><b> Renderowanie przy użyciu Args </b> pole wyboru </h5>
+        <div class="r-widget"> Renderowanie za pomocą argumentów ustawionych w polu edycji tekstu poniżej.</div>
+        <h5><b> Obszar tekstowy Args </b></h5>
+        <div class="r-widget"> Ustaw argumenty do renderowania.</div>
+        <h5><b> Przycisk wyboru obciążenia </b></h5>
+        <div class="r-widget"> Załaduj parametry renderowania zdefiniowane w lewym panelu do pola tekstowego args.</div>
+        <h5><b> Ext </b> rozwijane menu widgetu </h5>
+        <div class="r-widget"> Ustaw rozszerzenie pliku dla renderowanego pliku args.</div>
+        <h5><b> Otwórz plik w skrzynce </b> pole wyboru </h5>
+        <div class="r-widget"> Otwórz plik rendererd jako element multimedialny w bieżącym pojemniku.</div>
+        <h5><b> Menu rozwijane Renderuj zakres </b> menu </h5>
+        <div class="r-widget"> Wybierz pomiędzy renderowaniem całego programu lub zaznaczonego zakresu.</div>
+        <h5> Przycisk <b> Renderuj </b></h5>
+        <div class="r-widget"> Renderuje oś czasu do pliku.</div>
+    </div>
+
+    <div id="Wydajność_renderowania">
+        <h4> Wydajność renderowania </h4>
+        <ol>
+            <li> Naciśnij przycisk <b> Renderuj </b>, aby rozpocząć renderowanie.</li>
+            <li> Zostanie otwarte okno renderowania wyświetlające informacje o ścieżce pliku renderowania, szacowanym
+                czasie pozostałym do zakończenia, czasie renderowania i widżecie paska postępu.
+            </li>
+            <li> Po zakończeniu renderowania okno Renderowanie zamknie się automatycznie.</li>
+        </ol>
+    </div>
+
+    <div id="Kolejka_Renderowania_wsadowego">
+        <h3> Kolejka Renderowania wsadowego </h3>
+
+        <p>
+            Flowblade oferuje dedykowaną aplikację kolejki Render Bender. Kolejka Renderowania wsadowego to osobna
+            aplikacja do Flowblade i działa na różnych procesach, więc możliwe jest zamknięcie Flowblade bez wpływu na
+            bieżące renderowanie.
+        </p>
+        <p>
+            Kolejka renderowania to trwała struktura danych elementów renderowania na dysku. Każdy element składa się z
+            pliku projektu i zapisanych parametrów wyświetlania. Użytkownicy mogą dodawać elementy renderowania do
+            kolejki renderowania, a następnie renderować całą kolejkę bez wprowadzania dalszych danych przez
+            użytkownika.
+        </p>
+    </div>
+
+    <div id="Dodawanie_pozycji_do_kolejki_Renderowanie_wsadowe">
+        <h4> Dodawanie elementów do kolejki Renderowanie wsadowe </h4>
+        <ul>
+            <li> Naciśnij przycisk <b> Do kolejki </b> w zakładce <b> Renderuj </b>.</li>
+            <li> Wybierz pozycję <b> Renderuj-> Dodaj do kolejki Renderowanie wsadowe ... </b> z menu</li>
+        </ul>
+    </div>
+
+    <div id="Korzystanie_z_kolejki_Renderowanie_wsadowe">
+        <h4> Korzystanie z kolejki Renderowanie wsadowe </h4>
+        <ol>
+            <li> Otwórz aplikację kolejki renderowania wsadowego, wybierając z menu <b> Renderuj-> Kolejka Renderowania
+                wsadowego </b>.
+            </li>
+            <li> Naciśnij przycisk <b> Przeładuj kolejkę </b>, aby wyświetlić elementy renderowania dodane do kolejki
+                renderowania od momentu jej otwarcia.
+            </li>
+            <li> Użyj przycisków <b> Usuń wybrane </b> i <b> Usuń zakończone </b>, aby usunąć elementy z kolejki.</li>
+            <li> Użyj widgetu checkbox w kolumnie Render, aby wybrać elementy, które mają być renderowane.</li>
+            <li> Naciśnij przycisk <b> Renderuj </b>, aby rozpocząć renderowanie.</li>
+        </ol>
+        <p>
+            Działania interfejsu użytkownika:
+        </p>
+        <ul>
+            <li><b> Prawy przycisk myszy </b> renderuj element, aby wyświetlić menu kontekstowe elementu renderowanego.
+            </li>
+            <li><b> Zapisz projekt elementu jako ... </b> pozwala użytkownikowi zapisać plik projektu elementu
+                renderowania w tej samej innej lokalizacji
+            </li>
+            <li><b> Właściwości renderowania </b> wyświetla właściwości wyświetlania, które zostały ustawione, gdy
+                element został dodany do kolejki renderowania.
+            </li>
+            <li><b> Usuń </b> usuwa element z kolejki</li>
+        </ul>
+    </div>
+
+    <div id="Renderowanie_za_kulisami_MLT_i_libavformat_FFMpeg">
+        <h3> Renderowanie za kulisami: MLT i libavformat (FFMpeg) </h3>
+        <p>
+            Flowblade Movie Editor to aplikacja Pythona współpracująca z platformą multitrack mediów MLT.
+            Inne aplikacje do edycji wideo oparte na MLT to OpenShot i Kdenlive.
+        </p>
+        <p>
+            MLT używa biblioteki libavformat (FFMpeg) do renderowania plików wyjściowych, a renderowanie jest
+            definiowane przez ustawienie parametrów kodowania FFMpeg.
+            Te parametry są dostarczane z Flowblade Movie Editor do MLT, tworząc obiekt konsumencki "avformat" dla
+            dany profil Renderowania, a następnie ustawienie jego Rendering Args.
+            Te ostatnie argumenty są dokładnie takie same, które są używane podczas używania FFmpeg do kodowania plików
+            wideo.
+        </p>
+        <p>
+            Renderowanie argumentów do kodowania różnych typów plików wideo jest wstępnie pakowane i można je wybrać za
+            pomocą
+            Menu rozwijane Rozkładanie / Formatowanie i Jakość. Argumenty można udoskonalić
+            sprawdzając Renderuj z argumentami Checkbox i zmieniając wartości args i / lub dodając / usuwając args.
+        </p>
+        <p>
+            Każdy rodzaj plików wideo obsługiwanych przez zainstalowaną wersję MLT można zakodować, tworząc zdefiniowany
+            przez użytkownika
+            Renderuj profil i ustawiaj jego Rendering Args. Google do kodowania FFMpeg, aby znaleźć kombinacje Arg dla
+            różnych plików wideo.
+        </p>
+        <p>
+            Wyszukaj w Internecie informacje o kodowaniu plików za pomocą FFMpeg, aby uzyskać przykłady Rendering Args,
+            które mogą być użyte.
+        </p>
+    </div>
+
+    <div id="Flowblade_rendering_pipeline">
+        <h3> Potok renderowania Flowblade </h3>
+
+        <img src="encoding.png">
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
