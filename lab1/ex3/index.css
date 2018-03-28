@@ -33,3 +33,14 @@
     margin-left: 15px;
     margin-bottom: 10px;
 }
+
+.filter-property {
+    padding-left: 50px;
+    font-size: 12px;
+}
+
+.filter-value {
+    display: inline-block;
+    color: #0000bb;
+    font-size: 10px;
+}
