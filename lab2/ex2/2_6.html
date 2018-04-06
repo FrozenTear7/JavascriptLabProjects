@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Exercise big boy
+    </title>
+</head>
+<body>
+
+<main>
+    <script src="skrypt2.js"></script>
+
+    <br/><br/><br/><br/>
+
+    <form name="recordAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="client-id">Id</label>
+            <input type="text" class="form-control" id="client-id" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="itemName">Item name</label>
+            <input type="text" class="form-control" id="itemName" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="quantity">Quantity</label>
+            <input type="text" class="form-control" id="quantity" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="month">Month</label>
+            <input type="text" class="form-control" id="month" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="parseInputRecord()" class="btn btn-primary">Add record</button>
+    </form>
+
+    <br/><br/><br/>
+
+    <form name="itemAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="product-name">Name</label>
+            <input type="text" class="form-control" id="product-name" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="parseInputItem()" class="btn btn-primary">Add item</button>
+    </form>
+
+    <br/><br/><br/>
+
+    <form name="clientAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="client-id-add">Id</label>
+            <input type="text" class="form-control" id="client-id-add" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+            <label for="surname">Surname</label>
+            <input type="text" class="form-control" id="surname" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="parseInputClient()" class="btn btn-primary">Add client</button>
+    </form>
+
+    <br/><br/><br/>
+
+    <form name="itemAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="deleteRecordId">Name</label>
+            <input type="text" class="form-control" id="deleteRecordId" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="deleteRecord()" class="btn btn-primary">Delete record</button>
+    </form>
+
+    <form name="itemAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="deleteClientId">Name</label>
+            <input type="text" class="form-control" id="deleteClientId" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="deleteClient()" class="btn btn-primary">Delete client</button>
+    </form>
+
+    <form name="itemAdd" style="width: 25%; margin: auto;">
+        <div class="form-group">
+            <label for="deleteItemId">Name</label>
+            <input type="text" class="form-control" id="deleteItemId" aria-describedby="emailHelp"
+                   placeholder="Enter input">
+        </div>
+        <button type="button" onclick="deleteItem()" class="btn btn-primary">Delete item</button>
+    </form>
+</main>
+
+</body>
+</html>
