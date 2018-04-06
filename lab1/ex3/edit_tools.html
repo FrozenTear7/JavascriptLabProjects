@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item active" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2> Edytuj narzędzia</h2>
+
+    <p>
+        Edytor filmów Flowblade ma sześć narzędzi edycji, <b> 4 przesuwanie narzędzi </b> i <b> 3 przycinanie
+        narzędzi </b>.
+    </p>
+    <div class="jumbotron">
+        <b> Użyj skrótów klawiszowych! </b> Znacznie szybciej jest użyć klawiszy <b> 1-7 </b>, aby zmienić narzędzia.
+        Zwróć uwagę, że klawisze 1-7 zmieniają tylko narzędzia, jeśli na osi czasu jest ustawiona ostrość klawiatury.
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Narzędzie_wstawiania">Narzędzie wstawiania</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_do_nadpisywania">Narzędzie do nadpisywania</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_przycinania">Narzędzie przycinania</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_trim_multi">Narzędzie Trim Multi Track Marszczyć Tryb</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_do_przewijania">Narzędzie do przewijania</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_Slip">Narzędzie Slip</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_Spacer">Narzędzie Spacer</a></li>
+        <li class="list-group-item"><a href="#Narzędzie_skrzynki">Narzędzie skrzynki</a></li>
+        <li class="list-group-item"><a href="#Przenieś_zakończenie_przycinania">Przenieś zakończenie przycinania
+            narzędzia</a></li>
+    </ul>
+
+    <div id="Narzędzie_wstawiania">
+        <h3> Narzędzie wstawiania </h3>
+
+        <p>
+            Rozłóż jeden lub więcej klipów i umieść je w pożądanym miejscu na dowolnej ścieżce.
+        </p>
+
+        <ol>
+            <li> Wybierz narzędzie "Wstaw"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij przycisk <b> 1 </b>.</li>
+            </ul>
+            <li> Wybierz klip</li>
+            <ul>
+                <li> Kliknij <b> Lewa mysz </b> na klipie.</li>
+            </ul>
+            <li> Wybierz inny koniec zakresu klipów, jeśli przesuniesz wiele klipów</li>
+            <ul>
+                <li> Kliknij <b> CTRL + lewy przycisk myszy </b> na klipie, który ma być drugim końcem zakresu klipów z
+                    ruchami.
+                </li>
+            </ul>
+            <li> Przeciągnij klipy do nowej pozycji</li>
+            <ul>
+                <li> Naciśnij klawisz <b> Lewa mysz </b> na klipie selecetd i przeciągnij klip / s do nowej pozycji.
+                </li>
+                <li> Żółta strzałka wyświetla punkt wstawienia.</li>
+                <li> Możesz także przenosić klipy na inną ścieżkę.</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_do_nadpisywania">
+        <h3> Narzędzie do nadpisywania </h3>
+
+        <p>
+            Wyciągnij jeden lub więcej klipów i wstaw je w dowolnym miejscu, aby nadpisać na dowolnej ścieżce.
+        </p>
+
+        <ol>
+            <li> Wybierz narzędzie "Nadpisuj"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij klawisz <b> 2 </b>.</li>
+            </ul>
+            <li> Wybierz klip</li>
+            <ul>
+                <li><b> Kliknij </b> Lewa mysz <b> w klipie</b>.</li>
+                <li> </b> Wybierz inny koniec zakresu klipów podczas przenoszenia wielu klipów. Kliknij <b> CTRL + lewy
+                    przycisk myszy </b> na klipie, który ma być drugim końcem zakresu ruchu.
+                </li>
+            </ul>
+            <li> Przeciągnij klipy do nowej pozycji</li>
+            <ul>
+                <li> Naciśnij klawisz <b> Lewa mysz </b> na klipie selecetd i przeciągnij klip / s do nowej pozycji.
+                </li>
+                <li> Czerwone klipy cieni pokazują obszar nadpisywania.</li>
+                <li> Możesz także przenosić klipy na inną ścieżkę.</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_przycinania">
+        <h3> Narzędzie przycinania </h3>
+        <p>
+            Zrób klip dłuższy lub krótszy od końca klipu lub od początku klipu.
+        </p>
+        <ol>
+            <li> Wybierz narzędzie "Przytnij"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij klawisz <b> 3 </b>.</li>
+            </ul>
+            <li> Wybierz przycięte cięcie i wybierz nową lub pomniejszoną ramkę</li>
+            <ul>
+                <li> Naciśnij klawiszem <b> Lewa mysz </b> na klipie obok strony, którą chcesz przyciąć</li>
+                <li> Przejdź do opcji <b> Lewo przeciągnięcie </b> na klipie, aby wybrać nową lub pomniejszoną ramkę
+                </li>
+            </ul>
+            <li> Wyświetl przycięte cięcie</li>
+            <ul>
+                <li> Naciśnij przycisk <b> Odtwórz pętlę </b>, aby wyświetlić edycję.</li>
+            </ul>
+            <li> Wybierz nową przycinanie z innego klipu</li>
+            <ul>
+                <li> Kliknij przycisk <b> Lewa mysz </b> na innym klipie obok strony, którą chcesz przyciąć</li>
+            </ul>
+            <li> Wybierz inny koniec tego samego klipu do przycinania</li>
+            <ul>
+                <li> Kliknij puste miejsce na osi czasu</li>
+                <li> Kliknij przycisk <b> Lewa mysz </b> na oryginalnym klipie obok strony, którą chcesz przyciąć</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_trim_multi">
+        <h3> Narzędzie Trim Multi Track Marszczyć Tryb </h3>
+        <p>
+            Zrób klip dłuższy lub krótszy od końca klipu lub od początku klipu i przesuwaj elementy na innych ścieżkach,
+            aby zachować synchronizację pozycji z przyciętą ścieżką.
+        </p>
+        <ol>
+            <li> Wybierz narzędzie "Przytnij"</li>
+            <ul>
+                <li> Naciśnij przycisk <b> R </b>, aby przejść do trybu toru Multi Track.</li>
+            </ul>
+            <li> Wybierz przycięte cięcie i wybierz nową lub pomniejszoną ramkę</li>
+            <ul>
+                <li> Naciśnij klawiszem <b> Lewa mysz </b> na klipie obok strony, którą chcesz przyciąć</li>
+                <li> Przejdź do opcji <b> Lewo przeciągnięcie </b> na klipie, aby wybrać nową lub pomniejszoną ramkę
+                </li>
+            </ul>
+            <li> Elementy po wyrównaniu utrzymują synchronizację pozycji z przyciętą ścieżką.</li>
+            <li> Zakres przycinania jest ograniczony, więc na innych ścieżkach nie może wystąpić nadpisanie.</li>
+            <li> Naciśnij przycisk <b> R </b>, aby wyjść z trybu toru Multi Track.</li>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_do_przewijania">
+        <h3> Narzędzie do przewijania </h3>
+
+        <p> Przenieś punkt edycji między dwoma klipami, aby ich łączna długość pozostała taka sama. </p>
+
+        <ol>
+            <li> Wybierz narzędzie "Roll"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij klawisz <b> 4 </b>.</li>
+            </ul>
+            <li> Wybierz przycięte cięcie i zaznacz nowe lub pomniejsz klatki</li>
+            <ul>
+                <li> Naciśnij klawiszem <b> Lewa mysz </b> na klipie obok cięcia, które chcesz przyciąć po tej stronie,
+                    którą chcesz wyświetlić podczas przycinania
+                </li>
+                <li> Przejdź do opcji <b> Lewo przeciągnięcie </b> na dwóch wybranych klipach, aby wybrać wejścia lub
+                    wyjścia dla obu klipów
+                </li>
+            </ul>
+            <li> Wyświetl przycięte cięcie</li>
+            <ul>
+                <li> Naciśnij przycisk <b> Odtwórz pętlę </b>, aby wyświetlić edycję.</li>
+            </ul>
+            <li> Wybierz nową przycinanie z innego klipu</li>
+            <ul>
+                <li> Kliknij puste miejsce na osi czasu</li>
+                <li> Kliknij przycisk <b> Lewa mysz </b> obok cięcia, które chcesz przyciąć</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_Slip">
+        <h3> Narzędzie Slip </h3>
+
+        <p> Zmień wyświetlany obszar nośnika w klipie, zachowując niezmienioną pozycję klipu na osi czasu. </p>
+
+        <ol>
+            <li> Wybierz narzędzie "Slip"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij klawisz <b> 5 </b>.</li>
+            </ul>
+            <li> Wybierz przycięty klip i zmień wyświetlane multimedia</li>
+            <ul>
+                <li> Naciśnij klawiszem <b> Lewa mysz </b> na klipie, który chcesz przyciąć.</li>
+                <li> Przejdź do opcji <b> Lewo przeciągnięcie </b> z obszaru klipu, aby wyświetlić inny obszar
+                    multimediów
+                </li>
+            </ul>
+            <li> Wybierz nową przycinanie z innego klipu</li>
+            <ul>
+                <li> Kliknij puste miejsce na osi czasu</li>
+                <li> Kliknij przycisk <b> Lewa mysz </b> na klipie, który chcesz przyciąć</li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_Spacer">
+        <h3> Narzędzie Spacer </h3>
+
+        <p> Przenieś wszystkie elementy osi czasu po naciśnięciu klatki na wszystkich ścieżkach lub na jednej
+            ścieżce </p>
+        <ol>
+            <li> Wybierz narzędzie "Spacer"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij przycisk <b> 6 </b>.</li>
+            </ul>
+            <li> Wybierz klip na Osi czasu i przenieś go oraz wszystkie elementy po prawej stronie</li>
+            <ul>
+                <li> Naciśnij klawisz <b> Lewa mysz </b> na klipie.</li>
+                <li> Przejdź do <b> Przeciągnięcia z lewej strony </b>, a wszystkie klipy i compository z prawej strony
+                    do nowej pozycji
+                </li>
+                <li> Nie można przenosić elementów na klipy. Przedmioty można przenosić tylko na puste miejsce</li>
+            </ul>
+            <li> Użyj przycisku <b> Sterowanie </b>, aby zmieniać tylko elementy na jednej ścieżce</li>
+            <ul>
+                <li> Naciśnij klawisz <b> Sterowanie </b> i użyj <b> Lewej myszy </b>, aby przenieść wszystkie elementy
+                    na pojedynczą ścieżkę po prawej stronie wybranego klipu
+                </li>
+            </ul>
+        </ol>
+    </div>
+
+    <div id="Narzędzie_skrzynki">
+        <h3> Narzędzie skrzynki </h3>
+
+        <p> Wybierz i zastąp wszystkie elementy osi czasu znajdujące się w polu wyboru. </p>
+        <ol>
+            <li> Wybierz narzędzie "Box"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij przycisk <b> 7 </b>.</li>
+            </ul>
+            <li> Wybierz obszar na osi czasu, przeciągając pole wyboru za pomocą <b> lewej myszy </b> wokół wszystkich
+                elementów, które chcesz przenieść i zwolnij przycisk myszy.
+            </li>
+
+            <li> Naciśnij klawisz <b> Lewa mysz </b> wewnątrz pola wyboru i przeciągnij pole do nowej pozycji na osi
+                czasu i zwolnij mysz.
+            </li>
+            <li> Zawartość pudełka zostaje zastąpiona nową pozycją, a elementy przenoszące są przenoszone.</li>
+
+        </ol>
+    </div>
+
+    <div id="Przenieś_zakończenie_przycinania">
+        <h3> Przenieś zakończenie przycinania narzędzia </h3>
+
+        <p>
+            Po wybraniu narzędzia <b> Wstaw, Zastąp </b> lub <b> Spacer </b> końce klipów można przeciągać, aby wydłużyć
+            lub skrócić klip.
+        </p>
+
+        <ol>
+            <li> Wybierz narzędzie "Wstaw", "Zastąp" lub "Odstęp"</li>
+            <ul>
+                <li> Użyj menu rozwijanego <b> Tool Switcher </b> lub naciśnij przycisk <b> 1, 2 </b> lub <b> 6 </b>.
+                </li>
+            </ul>
+            <li> Wybierz koniec klipu do przycięcia</li>
+            <ul>
+                <li> Kliknij przycisk <b> Sterowanie + prawy przycisk myszy </b> w klipie.</li>
+            </ul>
+            <ul>
+                <li> Bliższy koniec klipu zostanie wybrany do edycji.</li>
+            </ul>
+            <li> Przeciągnij koniec klipu</li>
+            <ul>
+                <li> Dodana długość klipu spowoduje nadpisanie pustych i pustych miejsc</li>
+            </ul>
+            <ul>
+                <li> Dodana długość klipu spowoduje wstawienie w innych klipach</li>
+            </ul>
+            <ul>
+                <li> Zmniejszona długość klipu spowoduje splatanie.</li>
+            </ul>
+        </ol>
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

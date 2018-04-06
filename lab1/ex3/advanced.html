@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item active" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>ZAAWANSOWANA EDYCJA</h2>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Zaawansowane_działania_projektu_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            1. Zaawansowane działania projektu
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Zaawansowane_działania_projektu">Zaawansowane działania projektu</a>
+            <a class="dropdown-item" href="#Łączenie_sekwencji">Łączenie sekwencji</a>
+            <a class="dropdown-item" href="#Importowanie_mediów_z_innego_projektu">Importowanie mediów z innego
+                projektu</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Klipy_złożone_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            2. Klipy złożone
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Klipy_złożone">Klipy złożone</a>
+            <a class="dropdown-item" href="#Tworzenie_klipu_złożonego_z_zaznaczenia">Tworzenie klipu złożonego z
+                zaznaczenia</a>
+            <a class="dropdown-item" href="#Tworzenie_złożonego_klipu_z_sekwencji">Tworzenie złożonego klipu z
+                sekwencji</a>
+            <a class="dropdown-item" href="#Tworzenie_zsynchronizowanego_audio_klipu">Tworzenie zsynchronizowanego audio
+                klipu złożonego z dwóch elementów multimedialnych</a>
+        </div>
+    </div>
+
+    <a class="btn btn-secondary" href="#Synchronizacja_dźwięku_na_osi_czasu">3. Synchronizacja dźwięku na osi czasu</a>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button"
+                id="Powolne_szybkie_ruchy_i_odwrotne_klipy_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            4. Powolne / szybkie ruchy i odwrotne klipy
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Powolne_szybkie_ruchy_i_odwrotne_klipy">Powolne / szybkie ruchy i
+                odwrotne klipy</a>
+            <a class="dropdown-item" href="#Tworzenie_klipów_Motion">Tworzenie klipów Motion</a>
+            <a class="dropdown-item" href="#Tworzenie_odwróconych_klipów">Tworzenie odwróconych klipów</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="Rodzicielstwo_klipów_dropdown"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            5. Rodzicielstwo klipów
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#Rodzicielstwo_klipów">Rodzicielstwo klipów</a>
+            <a class="dropdown-item" href="#Główne_punkty">Główne punkty</a>
+            <a class="dropdown-item" href="#Ustawienie_sync_parent">Ustawienie Sync Parent</a>
+            <a class="dropdown-item" href="#Ponowna_synchronizacja_klipów_podrzędnych">Ponowna synchronizacja klipów
+                podrzędnych</a>
+            <a class="dropdown-item" href="#Czyszczenie_synchronizacji_relacji_między_rodzicami">Czyszczenie
+                synchronizacji relacji między rodzicami</a>
+            <a class="dropdown-item" href="#Synchronizowanie_złożonych_klipów">Synchronizowanie złożonych klipów</a>
+            <a class="dropdown-item" href="#Audio_split_synching">Audio Split Syncing</a>
+        </div>
+    </div>
+
+    <div id="Zaawansowane_działania_projektu">
+        <h2> 1. Zaawansowane akcje projektu </h2>
+    </div>
+
+
+    <div id="Łączenie_sekwencji">
+        <h3> Łączenie sekwencji </h3>
+        <p>
+            Możliwe jest zaimportowanie pełnej zawartości innej sekwencji do sekwencji aktualnie edytowanej.
+        </p>
+
+        <ol>
+            <li> Wybierz opcję <b> Projekt-> Importuj kolejną sekwencję do tego sekworu .. </b></li>
+            <li> Wybierz opcję Importuj.</li>
+            <ul>
+                <li><b> Dołącz sekwencję </b> dodaje zaimportowaną sekwencję na końcu aktualnej sekwencji</li>
+                <li><b> Wstaw sekwencję w pozycji głowicy </b> tworzy cięcie w pozycji głowicy i wstawia zaimportowane
+                    sekwencje w tej pozycji
+                </li>
+            </ul>
+            <li> Wybierz sekwencję do importu</li>
+            <ul>
+                <li><b> Zwróć uwagę, że musisz wykonać co najmniej dwie sekwencje w celu wykonania jakichkolwiek działań
+                    importowych. </b></li>
+            </ul>
+            <li> Naciśnij przycisk <b> Importuj </b>, aby wykonać import.</li>
+        </ol>
+    </div>
+
+    <div id="Importowanie_mediów_z_innego_projektu">
+        <h3> Importowanie mediów z innego projektu </h3>
+
+        <p>
+            Możesz importować elementy multimedialne z innego projektu.
+        </p>
+
+        <ol>
+            <li> Wybierz opcję <b> Projekt-> Importuj media z projektu ... </b></li>
+            <li> Wybierz plik projektu z systemu plików.</li>
+            <li> Elementy multimedialne, które nie są obecne w bieżącym projekcie, zostaną otwarte w bieżącym pojemniku.
+                Zwróć uwagę, że załadowanie projektu zajmuje kilka sekund, zanim pojawią się nowe elementy
+                multimedialne.
+            </li>
+        </ol>
+    </div>
+
+    <div id="Klipy_złożone">
+        <h2> 2. Klipy złożone </h2>
+
+        <p>
+            <B> Compound Clip </b> to pojedynczy klip utworzony przez połączenie wielu klipów i compositors w jeden
+            element multimedialny.
+        </p>
+
+        <p>
+            W klipach zespolonych Flowblade są <i> realizowane przez tworzenie pliku XML MLT </i> zapisanego w ukrytym
+            folderze. Zauważ, że obecnie nie jest możliwe rozpakowanie klipu złożonego z powrotem do jego komponentów.
+        </p>
+
+        <p>
+            Klipy złożone są użyteczne, gdy pewna złożona sekwencja jest wygodniej traktowana jako pojedyncza jednostka.
+        </p>
+    </div>
+
+    <div id="Tworzenie_klipu_złożonego_z_zaznaczenia">
+        <h3> Tworzenie klipu złożonego z zaznaczenia </h3>
+
+        <ol>
+            <li> Wybierz 2 lub więcej sąsiednich klipów z pojedynczej ścieżki.</li>
+            <li> Wybierz opcję <b> Projekt-> Utwórz złożony klip-> z zaznaczonych klipów </b></li>
+            <li> Podaj nazwę nowego elementu multimedialnego w oknie dialogowym.</li>
+            <li> Nowy element multimedialny pojawi się w bieżącym pojemniku.</li>
+        </ol>
+    </div>
+
+    <div id="Tworzenie_złożonego_klipu_z_sekwencji">
+        <h3> Tworzenie sprzężonego klipu z sekwencji </h3>
+
+        <ol>
+            <li> Wybierz opcję <b> Projekt-> Utwórz klip złożony-> Z bieżącej sekwencji </b></li>
+            <li> Podaj nazwę nowego elementu multimedialnego w oknie dialogowym.</li>
+            <li> Nowy element multimedialny pojawi się w bieżącym pojemniku.</li>
+        </ol>
+
+        <div id="Tworzenie_zsynchronizowanego_audio_klipu">
+            <h3> Tworzenie zsynchronizowanego audio klipu złożonego z dwóch elementów multimedialnych </h3>
+
+            <ol>
+                <li> Wybierz 2 elementy multimedialne w panelu Multimedia. </b> </li>
+                <ul>
+                    <li> Spodziewanym przypadkiem jest wybranie <b> 1 klipu wideo i 1 klipu audio </b>.</li>
+                    <li> Jeśli wybierzesz <b> 2 wideoklipy </b>, to, który jest używany jako wideo, zależy od kolejności
+                        wyboru.
+                    </li>
+                    <li> Dźwięk z klipu traktowanego jako wideo jest wyciszony.</li>
+                </ul>
+                <li> Wybierz opcję <b> Projekt-> Utwórz złożony klip -> Audio Sync Merge Clip z 2 elementów
+                    multimedialnych </b></li>
+                <li> Jeśli synchronizacja dźwięku zakończy się powodzeniem, okno dialogowe zostanie zatwierdzone. Podaj
+                    nazwę nowego elementu multimedialnego w oknie dialogowym.
+                </li>
+                <li> Nowy element multimedialny pojawi się w bieżącym pojemniku.</li>
+            </ol>
+
+            <div class="jumbotron">
+                Synchronizacja dźwięku wyszukuje najlepsze dopasowanie matematyczne pomiędzy dwoma przebiegami audio,
+                więc <b> synchronizacja dźwięku niezgodnego dźwięku da wyniki losowe. </b>
+            </div>
+
+            <div id="Synchronizacja_dźwięku_na_osi_czasu">
+                <h2> 3. Synchronizacja audio na osi czasu </h2>
+
+                <p>
+                    Możesz utworzyć klip, aby przejść do pozycji na osi czasu, w której jego dźwięk jest
+                    zsynchronizowany z dźwiękiem innego klipu na osi czasu.
+                </p>
+
+                <p>
+                    Umożliwia to uproszczoną edycję wielokamerową na osi czasu.
+                </p>
+
+                <ol>
+                    <li> Otwórz menu kontekstowe za pomocą <b> prawej myszy </b> na klipie, który chcesz zsynchronizować
+                        z innym klipem.
+                    </li>
+                    <li> Wybierz element menu <b> Wybierz Clip do Audio Sync z ... </b>. Kursor zmieni się w krzyż
+                        kierowania.
+                    </li>
+                    <li> Kliknij Klip, z którym chcesz zsynchronizować dźwięk.</li>
+                    <li> Otworzy się okno dialogowe z informacjami na temat akcji synchronizacji, która ma zostać
+                        wykonana w celu zsynchronizowania klipów.
+                    </li>
+                    <li> Naciśnij przycisk <b> Wykonaj synchronizację audio Przenieś edycję </b>, aby wykonać edycję
+                        synchronizacji.
+                    </li>
+                    <li> Zazwyczaj dobrze jest wyciszyć jeden ze zsynchronizowanych klipów</li>
+                </ol>
+
+                <div class="note">
+                    Synchronizacja dźwięku wyszukuje najlepsze dopasowanie matematyczne pomiędzy dwoma przebiegami
+                    audio, więc <b> synchronizacja dźwięku niezgodnego dźwięku da wyniki losowe. </b>
+                </div>
+            </div>
+
+            <div id="Powolne_szybkie_ruchy_i_odwrotne_klipy">
+                <h2> 4. Powolne / szybkie ruchy i odwrotne klipy </h2>
+
+                <p>
+                    W Flowblade efekty ruchowe są osiągane przez <b> renderowanie powolnych / szybkich lub odwróconych
+                    wersji klipów wideo </b> i umieszczanie ich na osi czasu.
+                </p>
+            </div>
+
+            <div id="Tworzenie_klipów_Motion">
+                <h3> Tworzenie klipów Motion </h3>
+                <ol>
+                    <li> Kliknij prawym przyciskiem myszy plik multimedialny i wybierz <b> Renderuj powolny / szybki
+                        ruch </b> z menu
+                    </li>
+                    <li> Edytuj parametry nowego klipu ruchu
+                        <ul>
+                            <li> Ustaw prędkość</li>
+                            <li> Podaj nazwę i lokalizację klipu ruchu</li>
+                            <li> Wybierz parametry renderowania klipu ruchu. Dobrym pomysłem jest tutaj użycie <b>
+                                formatu bezstratnego </b>, aby uniknąć utraty jakości generacyjnej.
+                            </li>
+                            <li> Wybierz zakres renderowania:</li>
+                            <ul>
+                                <li> Pełny klip źródłowy</li>
+                                <li> Od źródła Clip Mark Mark In, aby zaznaczyć</li>
+                            </ul>
+                        </ul>
+                    <li> Kliknij przycisk <b> Renderuj </b>, aby utworzyć nowy klip filmowy</li>
+                </ol>
+            </div>
+
+            <div id="Tworzenie_odwróconych_klipów">
+                <h3> Tworzenie odwróconych klipów </h3>
+                <ol>
+                    <li> Kliknij prawym przyciskiem myszy plik multimedialny i wybierz <b> Odwróć plik ruchu
+                        wstecznego </b> z menu
+                    </li>
+                    <li> Edytuj parametry nowego klipu ruchu
+                        <ul>
+                            <li> Ustaw prędkość</li>
+                            <li> Podaj nazwę i lokalizację klipu wstecznego</li>
+                            <li> Wybierz parametry renderowania dla odwróconego klipu. Dobrym pomysłem jest tutaj użycie
+                                <b> formatu bezstratnego </b>, aby uniknąć utraty jakości generacyjnej.
+                            </li>
+                            <li> Wybierz zakres renderowania:</li>
+                            <ul>
+                                <li> Pełny klip źródłowy</li>
+                                <li> Od źródła Clip Mark Mark In, aby zaznaczyć</li>
+                            </ul>
+                        </ul>
+                    <li> Kliknij przycisk <b> Renderuj </b>, aby utworzyć nowy odwrócony klip</li>
+                </ol>
+            </div>
+
+            <div id="Rodzicielstwo_klipów">
+                <h2> 5. Rodzicielstwo klipów </h2>
+
+                <p>
+                    W Flowblade Movie Editor można <b> ustawić pozycje klipu, aby śledzić pozycje innego klipu </b> na
+                    żądanie.
+                </p>
+            </div>
+
+            <div id="Główne_punkty">
+                <h3> Główne punkty </h3>
+                <ul>
+                    <li> Relacje synchronizacji są konfigurowane przez wybranie <b> synchronizacji klipu
+                        nadrzędnego </b> dla <b> synchronizacji klipu podrzędnego </b>.
+                    </li>
+                    <li><b> Tylko klipy na ścieżce V1 można synchronizować Klipy rodzica </b>. Odbywa się to w celu
+                        zachęcenia do stylu edycji, w którym główna część Sekwencji znajduje się na ścieżce V1, a
+                        kompozycje i edycje z podziałem audio są wykonywane względem sekwencji klipów na ścieżce V1.
+                    </li>
+                    <li><b> Funkcja synchronizacji pomaga zachować wcześniejszą pracę </b> kompozytów wielościeżkowych i
+                        edycję z podziałem audio, gdy klipy nie są już we właściwych położeniach względem siebie, z
+                        powodu zmian w innych częściach Sekwencji.
+                    </li>
+                    <li><b> Resynchronizacja odbywa się tylko na żądanie </b>, aby uniknąć przeskakiwania klipów na osi
+                        czasu podczas edycji. Wyraźne resynchronizacje są również lepsze z punktu widzenia unikania
+                        efektów ubocznych podczas edycji.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Ustawienie_sync_parent">
+                <h3> Ustawianie synchronizacji rodzica </h3>
+                <ol>
+                    <li> Kliknij przycisk <b> Prawy przycisk myszy </b> na klipie i wybierz opcję Wybierz synchronizację
+                        klipa rodzica ... w dowolnym klipie NIE na ścieżce V1.
+                    </li>
+                    <li> Kursor zamienia się w Krzyż Docelowy. Kliknij klip na ścieżce V1, aby wybrać go jako Sync
+                        Parent Clip.
+                    </li>
+                    <li> Utworzono powiązanie między dwoma klipami. Kursor wraca do domyślnego wskaźnika.</li>
+                    <li> Synchronizuje paski stanu na klipie synchronizacji potomków. Synchronizuj paski stanu na
+                        klipach:
+                    </li>
+                    <ul>
+                        <li> Zielony oznacza, że klip jest zsynchronizowany z rodzicem.</li>
+                        <li> Kolor czerwony oznacza, że klip NIE jest zsynchronizowany z elementem nadrzędnym.</li>
+                        <li> Szary oznacza, że Sync Parent Clip nie jest już na ścieżce V1.</li>
+                    </ul>
+                </ol>
+            </div>
+
+            <div id="Ponowna_synchronizacja_klipów_podrzędnych">
+                <h3> Ponowna synchronizacja klipów podrzędnych </h3>
+                <ul>
+                    <li> Wybierz opcję <b> Edytuj -> Ponownie zsynchronizuj wszystko, aby ponownie zsynchronizować </b>
+                        z menu aplikacji, wszystkie Synchronizuj klipy potomne.
+                    </li>
+                    <li> Wybierz opcję <b> Edytuj -> Ponownie zsynchronizuj wybraną, aby ponownie zsynchronizować </b> z
+                        wybranego menu aplikacji Synchronizuj klipy potomne.
+                    </li>
+                    <li> Kliknij opcję <b> Prawy przycisk myszy </b> w obszarze Synchronizuj klip podrzędny i wybierz
+                        opcję <b> Ponownie zsynchronizuj </b> z menu popoup, aby ponownie zsynchronizować pojedynczy
+                        klip.
+                    </li>
+                    <li> Naciśnij przycisk <b> Ponownie zsynchronizuj wybrane </b> Bbtton, aby ponownie zsynchronizować
+                        wybraną synchronizację klipów podrzędnych.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Czyszczenie_synchronizacji_relacji_między_rodzicami">
+                <h3> Czyszczenie synchronizacji relacji między rodzicami </h3>
+                <ul>
+                    <li> Kliknij opcję <b> Prawy przycisk myszy </b> w pozycji Synchronizuj klip podrzędny i wybierz
+                        opcję Wyczyść powiązanie sync.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Synchronizowanie_złożonych_klipów">
+                <h3> Synchronizowanie złożonych klipów </h3>
+                <ul>
+                    <li> W razie potrzeby ustaw wszystkie klipy będące częścią kompozycji wielościeżkowej
+                        zsynchronizowane z tym samym klipem.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="Audio_split_synching">
+                <h3> Audio Split Syncing </h3>
+                <ul>
+                    <li> Kliknij <b> Prawy przycisk myszy </b> na klipie w ścieżce V1 i wybierz Podziel synchronizację
+                        dźwięku.
+                    </li>
+                    <li> Edytuj dzielenie dźwięku za pomocą trybu dwuwarstwowego, aby zachować synchronizację z klipem
+                        nadrzędnym.
+                    </li>
+                    <li> Ponownie zsynchronizuj dźwięk w razie potrzeby.</li>
+                </ul>
+            </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

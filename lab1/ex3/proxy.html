@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item active" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>EDYTOWANIE PROXY</h2>
+
+    <p>Edycja proxy to metoda edycji, w której oryginalne klipy multimedialne są prezentowane na osi czasu za pomocą
+        klipów proxy.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Racjonalne_uzasadnienie">Racjonalne uzasadnienie</a></li>
+        <li class="list-group-item"><a href="#Ogólny_obieg_pracy_dla_proxy">Ogólny obieg pracy dla proxy</a></li>
+        <li class="list-group-item"><a href="#Edycja_proxy_proxy_Flowblade">Edycja proxy proxy Flowblade</a></li>
+        <li class="list-group-item"><a href="#Ważne_uwagi_dotyczące_edycji_proxy_proxy_Flowblade">Ważne uwagi dotyczące
+            edycji proxy proxy Flowblade</a></li>
+    </ul>
+
+    <div id="Racjonalne_uzasadnienie">
+        <h3> Racjonalne uzasadnienie </h3>
+        <p>
+            Klipy proxy używane podczas edycji proxy mają zazwyczaj mniejszą szybkość transmisji danych i mniej
+            intensywne dekodowanie procesora. Istnieją dwa główne powody używania edycji proxy:
+        </p>
+        <ul>
+            <li> Oryginalne nośniki, z których program jest edytowany, powodują zbyt wysokie zapotrzebowanie na
+                przepustowość dysku lub moc obliczeniową procesora w celu dekodowania w celu umożliwienia elastycznej
+                edycji
+            </li>
+            <li> Oryginał przechowywany jest na serwerze sieciowym, wolny dysk zewnętrzny lub inny nośnik z ograniczonym
+                dostępem i nie umożliwia szybkiej edycji w przypadku bezpośredniego dostępu.
+            </li>
+        </ul>
+    </div>
+
+    <div id="Ogólny_obieg_pracy_dla_proxy">
+        <h3> Ogólny obieg pracy proxy </h3>
+
+        <p>
+            Wszystkie przepływy pracy przy edycji proxy mają te same fazy:
+        </p>
+        <ol>
+            <li> Renderuj media proxy z oryginalnych nośników</li>
+            <li> Zamień oryginalne nośniki na media proxy</li>
+            <li> Edytuj za pomocą mediów proxy</li>
+            <li> Zamień nośnik proxy na oryginalny nośnik</li>
+            <li> Renderuj końcowy program przy użyciu oryginalnych mediów</li>
+        </ol>
+    </div>
+
+    <div id="Edycja_proxy_proxy_Flowblade">
+        <h3> Edycja proxy proxy Flowblade </h3>
+        <ol>
+            <li> Tworzenie Media proxy</li>
+            <ol>
+                <li> Wybierz opcję <b> Projekt-> Menedżer proxy </b> w menu i ustaw ustawienia pliku proxy w obszarze
+                    <b> Kodowanie Proxy </b></li>
+                <li> Wybierz pliki wideo mediów w <b> "Media" </b> Panel</li>
+                <li> Naciśnij przycisk z ikoną pliku proxy następnie przycisk Usuń w panelu "Media"</li>
+                <li> Jeśli projekt jest już w trybie proxy <b> Korzystanie z proxy proxy </b>, klipy na osi czasu z
+                    oryginalnymi nośnikami, na których wyświetlono media proxy, zostaną natychmiast zastąpione przez
+                    media proxy
+                </li>
+            </ol>
+            <li> Konwersja na nośnik proxy</li>
+            <ol>
+                <li> Wybierz opcję <b> Projekt-> Menedżer proxy </b>, aby otworzyć aplikację Proxy Manager</li>
+                <li> Naciśnij przycisk <b> Użyj Media proxy </b></li>
+            </ol>
+            <li> Edytowanie za pomocą mediów proxy</li>
+            <ol>
+                <li> Klipy korzystające z mediów proxy mają niebieski pasek wskazujący ten status</li>
+                <li> Ikona wskaźnika edycji proxy jest wyświetlana w lewym dolnym rogu</li>
+                <li> Jeśli nowe media proxy zostaną renderowane, klipy osi czasu z użyciem oryginalnego nośnika zostaną
+                    natychmiast zastąpione przez media proxy
+                </li>
+                <li> Projekt można zapisać normalnie i przekonwertować po wczytaniu na oryginalny nośnik</li>
+            </ol>
+            <li> Konwersja na oryginalne media</li>
+            <ol>
+                <li> Wybierz opcję <b> Projekt-> Menedżer proxy </b>, aby otworzyć aplikację Proxy Manager</li>
+                <li> Naciśnij przycisk <b> Użyj oryginalnego nośnika </b></li>
+            </ol>
+        </ol>
+    </div>
+
+    <div id="Ważne_uwagi_dotyczące_edycji_proxy_proxy_Flowblade">
+        <h3> Ważne uwagi dotyczące edycji proxy proxy Flowblade </h3>
+        <div class="list-group-item-warning">
+            <li><b> ZNISZCZENIE JAKICHKOLWIEK MEDIÓW podczas edytowania proxy OCHRONA PRZED KORZYSTANIE Z ORYGINALNYCH
+                MEDIÓW </b></li>
+            <li><b> Można używać tylko <i> istniejących </i> nośników proxy i klipów lub wszystkich oryginalnych
+                nośników </b>. Nie można używać tylko niektórych utworzonych mediów proxy.
+            </li>
+
+        </div>
+        <div class="jumbotron">
+            <p>
+                Flowblade wykorzystuje technologię programistyczną, która zmienia ścieżki używane przez elementy
+                multimedialne i klipy, aby wskazywać na ukryte media proxy lub oryginalne media.
+            </p>
+            <p>
+                 Przejście z jednego na drugie jest realizowane poprzez zapisanie ukrytego tymczasowego pliku projektu
+                na dysku i zastąpienie ścieżek po odczytywaniu projektu. Z tego powodu brakujące oryginalne nośniki
+                powodują, że konwersja powraca do użycia oryginalnego nośnika.
+            </p>
+        </div>
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible"
+          content="ie=edge">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="index.css"
+          type="text/css">
+    <script defer
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <title>
+        Dokumentacja
+    </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-flowblade">
+    <a href="index.html">
+        <img src="flowblade.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="index.html">Pomoc</a>
+                    <a class="dropdown-item" href="intro.html">Wprowadzenie</a>
+                    <a class="dropdown-item" href="basic_editing.html">Podstawowe edytowanie</a>
+                    <a class="dropdown-item" href="edit_tools.html">Narzędzia edycji</a>
+                    <a class="dropdown-item" href="compositor.html">Tworzenie złożonych obrazów</a>
+                    <a class="dropdown-item" href="filtering.html">Filtrowanie obrazu i dźwięku</a>
+                    <a class="dropdown-item" href="advanced.html">Zaawansowana edycja</a>
+                    <a class="dropdown-item" href="range_log.html">Rejestr zasięgu</a>
+                    <a class="dropdown-item active" href="proxy.html">Edytowanie proxy</a>
+                    <a class="dropdown-item" href="tools.html">Przybory</a>
+                    <a class="dropdown-item" href="rendering.html">Wykonanie</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="container index-main-left">
+    <img src="flowblade_big.png"/>
+
+    <br/><br/>
+
+    <h2>PRZYBORY</h2>
+
+    <p>Flowblade dostarcza niezależne narzędzia dla ważnych funkcji, które nie mogą być logicznie i wygodnie
+        przedstawione za pośrednictwem lewego górnego panelu lub osi czasu.</p>
+
+    <ul class="list-group">
+        <li class="list-group-item"><a href="#Titler">Titler</a></li>
+        <li class="list-group-item"><a href="#Mikser_audio">Mikser audio</a></li>
+        <li class="list-group-item"><a href="#Media_Relinker">Media Relinker</a></li>
+        <li class="list-group-item"><a href="#Efekty_G_Mic">Efekty G'Mic</a></li>
+        <li class="list-group-item"><a href="#Ładowanie_klipu_i_wyświetlanie_podglądu">Ładowanie klipu i wyświetlanie
+            podglądu</a></li>
+        <li class="list-group-item"><a href="#Renderowanie_wyjściowe">Renderowanie wyjściowe</a></li>
+    </ul>
+
+    <div id="Titler">
+        <h3> Titler </h3>
+        <p> Funkcje: </p>
+        <ul>
+            <li> Dodaj i usuń warstwy w obszarze Warstwy</li>
+            <li> Edytuj właściwości warstwy i tekst w obszarze Aktywna warstwa</li>
+            <li> Ustaw pozycję tekstu, przeciągając aktywną warstwę w edytorze widoku</li>
+            <li> Ustaw obraz tła z Osi czasu, aby odpowiednio ułożyć tekst, przeciągając wskaźnik ramki na pasku
+                pozycji
+            </li>
+            <li> Ładuj i zapisuj dane warstw w obszarze warstw</li>
+        </ul>
+    </div>
+
+    <div id="Mikser_audio">
+        <h3> Mikser audio </h3>
+        <p> Funkcje: </p>
+        <ul>
+            <li> Monitoruj poziomy dźwięku na miernikach VU podczas odtwarzania</li>
+            <li> Użyj suwaków, aby ustawić głośność dla utworów lub Master Out</li>
+            <li> Kliknij przycisk <b> Przesuń </b>, aby aktywować suwak panoramy i użyć go do przesuwania dźwięku</li>
+        </ul>
+    </div>
+
+    <div id="Media_Relinker">
+        <h3> Media Relinker </h3>
+        <p>
+            Media Relinker to samodzielna aplikacja działająca we własnym procesie i nie wpływająca na projekt
+            otwarty w Flowblade
+        </p>
+        <ol>
+            <li> Rozpocznij, naciskając przycisk <b> Wczytaj projekt do ponownego łączenia </b> i wybierz projekt, który
+                chcesz ponownie połączyć.
+            </li>
+            <li> Wybierz plik multimedialny, który chcesz zastąpić innym plikiem multimedialnym. Naciśnij przycisk <b>
+                Ustaw przycisk Połącz ponownie link </b> lub naciśnij przycisk <b> Prawy przycisk myszy </b>, aby
+                rozpocząć wybór nowego pliku. Klipy i chusteczki w projekcie są powiązane z tym nowym plikiem
+                multimedialnym.
+            </li>
+            <li> Użyj menu rozwijanego w lewym dolnym rogu, aby wyświetlić brakujące lub znalezione pliki
+                multimedialne
+            </li>
+            <li> Naciśnij przycisk <b> Zapisz projekt ponownego zwijania jako ... </b>, aby zapisać relinkowaną wersję
+                projektu
+            </li>
+            <li> Otwórz ponownie powiązany projekt w Flowblade i kontynuuj pracę z nim</li>
+            <li> Media Relinker działa we własnym procesie i nie współdzieli stanu ani danych z uruchomioną aplikacją.
+            </li>
+            <li> Podczas ponownego łączenia projektu otwartego w Flowblade w tym samym czasie upewnij się, że nie
+                zapisujesz ponownie powiązanej wersji projektu podczas zapisywania otwartego projektu w Flowblade
+            </li>
+        </ol>
+    </div>
+
+    <div id="Efekty_G_Mic">
+        <h3> Efekty G'Mic </h3>
+        <p>
+            G'MIC to w pełni funkcjonalny framework open-source do przetwarzania obrazu.
+        </p>
+        <p>
+            Narzędzie Flowblade G'MIC przedstawia użytkownikowi zbiór komun, które można wykorzystać do osiągnięcia
+            złożonego filtrowania klipów wideo. </p>
+        <p>
+            <b> UWAGA: Jeśli w systemie nie ma polecenia, odpowiedni wybór filtrowania nie zadziała. </b>
+        </p>
+        <p>
+            Polecenia są w większości osadzone w samym binarnym pliku <b> / usr / bin / gmic </b>, więc aby uzyskać
+            dostęp do większej liczby poleceń, będziesz potrzebować większego pakietu binarnego w swoim systemie.
+        </p>
+        <p>
+            Możliwe jest jednak dodawanie niestandardowych poleceń i używanie ich do filtrowania wideo, <a
+                href=" http://gmic.eu/reference.shtml#section11"> więcej informacji tutaj. </a>
+        </p>
+    </div>
+
+    <div id="Ładowanie_klipu_i_wyświetlanie_podglądu">
+        <h4> Ładowanie klipu i wyświetlanie podglądu </h4>
+        <ul>
+            <li> Rozpocznij, naciskając przycisk <b> Załaduj klip </b> i wybierz klip wideo, w którym chcesz zastosować
+                filtrowanie.
+            </li>
+            <li> Naciśnij lewy trójkąt znajdujący się u góry <b> obszaru edycji skryptu </b> po lewej stronie okna, aby
+                wybrać polecenie gmic.
+            </li>
+            <li> Możesz zmienić wartości nadane poleceniom w <b> obszarze edycji skryptów </b>.</li>
+            <li> Naciśnij przycisk <b> Podgląd </b> po prawej stronie, aby wyświetlić przefiltrowany obraz.</li>
+            <li> Po renderowaniu podglądu obszar poniżej <b> Obszar edycji skryptu </b> pokazuje tekst wyjściowy z gmic
+                z możliwymi komunikatami o błędach.
+            </li>
+            <li> Możesz zastosować wiele poleceń, zaznaczając pole wyboru <b> Dodaj do skryptu </b>.</li>
+        </ul>
+    </div>
+
+    <div id="Renderowanie_wyjściowe">
+        <h4> Wyjście renderowania </h4>
+        <ul>
+            <li> Aby wyrenderować sekwencję klatek, musisz ustawić <b> Zaznacz i zaznacz punkty </b> i <b> wybierz
+                folder </b>, aby zatrzymać renderowaną sekwencję klatek.
+            </li>
+            <li> Aby wyrenderować plik wideo z przefiltrowanej sekwencji klatek, zaznacz pole wyboru <b> Kodowanie
+                wideo </b> i naciśnij przycisk <b> Ustawienia kodowania </b>, aby ustawić właściwości renderowanego
+                pliku wideo.
+            </li>
+        </ul>
+    </div>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
