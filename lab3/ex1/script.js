@@ -1,10 +1,10 @@
 let timeFunInterval, timeFunTimeout, timeFunRequest
-let funIntervalHandler, funTimeoutHandler, funRequestHandler
+let funIntervalHandler, funTimeoutHandler, funRequestHandler = false
 
 const slowOperationsOuch = () => {
-  for (let i = 0; i < 1000000; i++) {
+  for (let i = 0; i < 100000000; i++) {
     let x = 3
-    x = 69 * i * 420 * 9
+    x = 6.9 * i * 4200000 * 9000000.6
   }
 }
 
@@ -34,7 +34,8 @@ const funRequest = () => {
   console.log('fun request: ' + timeFunRequest + ' ms')
   console.log('_________________________________')
   timeFunRequest = newDate.getTime()
-  window.requestAnimationFrame(funRequest)
+  if (funRequestHandler)
+    window.requestAnimationFrame(funRequest)
 }
 
 const launchFunctions = () => {
@@ -45,10 +46,12 @@ const launchFunctions = () => {
 
   funIntervalHandler = setInterval(funInterval, 1000)
   funTimeoutHandler = window.setTimeout(funTimeout, 1000)
-  window.requestAnimationFrame(funRequest)
+  //window.requestAnimationFrame(funRequest)
+  funRequestHandler = true
 }
 
 const stopFunctions = () => {
   clearInterval(funIntervalHandler)
   window.clearTimeout(funTimeoutHandler)
+  funRequestHandler = false
 }
