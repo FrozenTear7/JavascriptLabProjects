@@ -1,3 +1,19 @@
+const myMove = () => {
+  const elem = document.getElementById('aside')
+  let pos = 0
+  const id = setInterval(frame, 5)
+
+  function frame () {
+    if (pos === 350) {
+      clearInterval(id)
+    } else {
+      pos++
+      elem.style.top = pos + 'px'
+      elem.style.left = pos + 'px'
+    }
+  }
+}
+
 const useCss = () => {
   const aside = document.getElementById('aside')
   aside.style.textAlign = 'left'
@@ -39,6 +55,8 @@ const useCss = () => {
 
   const ul2 = document.getElementById('ul2')
   ul2.style.textAlign = 'left'
+
+  myMove()
 }
 
 const eraseCss = () => {
