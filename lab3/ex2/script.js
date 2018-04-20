@@ -1,9 +1,66 @@
+const elements = ['main', 'aside', 'footer']
+let setCssHandler
+
+let randomElement = Math.round(Math.random() * elements.length)
+let randomCss = Math.round(Math.random() * 5)
+
+const applyBgColor = (element) => {
+  element.style.backgroundColor = 'blue'
+}
+
+const applyWidth = (element) => {
+  element.style.width = '50%'
+}
+
+const applyMargin = (element) => {
+  element.style.marginTop = '100px'
+}
+
+const applyTextCenter = (element) => {
+  element.style.textAlign = 'ceter'
+}
+
+const applyTextIndent = (element) => {
+  element.style.textIndent = '200px'
+}
+
+const applyOnce = () => {
+  console.log('odpalam')
+  console.log(randomElement)
+  const element = document.getElementById(elements[randomElement])
+  switch (randomCss) {
+    case 0:
+      applyBgColor(element)
+      break
+    case 1:
+      applyWidth(element)
+      break
+    case 2:
+      applyMargin(element)
+      break
+    case 3:
+      applyTextCenter(element)
+      break
+    case 4:
+      applyTextIndent(element)
+      break
+  }
+}
+
+const applyRepeat = () => {
+  setCssHandler = setInterval(applyOnce, 1000)
+}
+
+const stopApply = () => {
+  clearInterval(setCssHandler)
+}
+
 const myMove = () => {
   const elem = document.getElementById('aside')
   let pos = 0
   const id = setInterval(frame, 5)
 
-  function frame () {
+  function frame() {
     if (pos === 350) {
       clearInterval(id)
     } else {
@@ -56,7 +113,7 @@ const useCss = () => {
   const ul2 = document.getElementById('ul2')
   ul2.style.textAlign = 'left'
 
-  myMove()
+  //myMove()
 }
 
 const eraseCss = () => {

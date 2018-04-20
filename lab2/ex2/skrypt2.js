@@ -1,5 +1,3 @@
-window.onload = loadData
-
 let idClient = 0
 let idProduct = 0
 
@@ -12,7 +10,7 @@ let products = [
   {id: idProduct++, name: 'Krakersy Lewiatan Chrup&Fun', price: 1, quantity: 2, month: 2, productClientId: 0},
   {id: idProduct++, name: 'Žatecký Světlý Ležák', price: 1, quantity: 2, month: 2, productClientId: 0},
   {id: idProduct++, name: 'Big Lager', price: 3, quantity: 5, month: 5, productClientId: 0},
-  {id: idProduct++, name: 'Okocim MOCNE', price: 4, quantity: 5, month: 4, productClientId: 0},
+  {id: idProduct++, name: 'Okocim MOCNE', price: 4, quantity: 5, month: 4, productClientId: 1},
   {id: idProduct++, name: 'Piwo Tesco Quality', price: 2, quantity: 2, month: 1, productClientId: 1},
 ]
 
@@ -39,7 +37,7 @@ const drawChart = (client) => {
     months = [...months, {
       id: i, quantity: products.filter(product => product.productClientId === client.id
         && product.month === i).length, sum: monthSum(products.filter(product => product.productClientId === client.id
-        && product.month === i))
+        && product.month === i)),
     }]
   }
 
@@ -59,11 +57,13 @@ const drawChart = (client) => {
 
   const moveUp = 20
 
+  console.log(months)
+
   months.forEach((month, i) => {
     context.fillStyle = '#ffa4ec'
     context.lineWidth = 1
     context.beginPath()
-    context.rect(i / jumpRight, moveUp, jumpRight, (month.sum / maxSum) * 0.7 * height)
+    context.rect(i * jumpRight, moveUp, jumpRight, (month.sum / maxSum) * 0.7 * height)
     context.closePath()
     context.fill()
     context.stroke()
@@ -180,3 +180,5 @@ const loadData = () => {
   loadClients()
   loadProducts()
 }
+
+window.onload = loadData
