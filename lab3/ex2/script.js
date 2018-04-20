@@ -1,9 +1,6 @@
 const elements = ['main', 'aside', 'footer']
 let setCssHandler
 
-let randomElement = Math.round(Math.random() * elements.length)
-let randomCss = Math.round(Math.random() * 5)
-
 const applyBgColor = (element) => {
   element.style.backgroundColor = 'blue'
 }
@@ -17,7 +14,7 @@ const applyMargin = (element) => {
 }
 
 const applyTextCenter = (element) => {
-  element.style.textAlign = 'ceter'
+  element.style.textAlign = 'center'
 }
 
 const applyTextIndent = (element) => {
@@ -25,10 +22,8 @@ const applyTextIndent = (element) => {
 }
 
 const applyOnce = () => {
-  console.log('odpalam')
-  console.log(randomElement)
-  const element = document.getElementById(elements[randomElement])
-  switch (randomCss) {
+  const element = document.getElementById(elements[Math.floor(Math.random() * elements.length)])
+  switch (Math.floor(Math.random() * 5)) {
     case 0:
       applyBgColor(element)
       break
