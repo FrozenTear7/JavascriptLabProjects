@@ -1,16 +1,41 @@
 // 0 - left, 1 - up, 2 - right, 3 - down
+const audio = new Audio('WOO.mp3')
 let keyDown = null
+let width, height
 let circleX, circleY
 let ctx
+let points = 0
+let timer = 20
+let curTime = new Date
+
+let rectArr = []
+
 
 const check = (e) => {
-  if(e.keyCode < 41 && e.keyCode > 36)
-  keyDown = e.keyCode - 36
+  if (e.keyCode < 41 && e.keyCode > 36)
+    keyDown = e.keyCode - 36
 }
 
-const drawRect = (ctx) => {
-  ctx.fillStyle = '#3aee08'
-  ctx.fillRect(25, 25, 100, 100)
+const checkPoints = () => {
+  rectArr.forEach(rect => {
+    if (circleX <= rect.x + 50 && circleX >= rect.x && circleY <= rect.y + 50 && circleY >= rect.y && !rect.touched) {
+      audio.play()
+      const tmpId = rect.id
+      points += timer
+      rectArr.map(rect => {
+        if (rect.id === tmpId)
+          rect.touched = true
+      })
+    }
+  })
+}
+
+const HUD = () => {
+  checkPoints()
+
+  ctx.fillStyle = '#000000'
+  ctx.font = '15px Arial'
+  ctx.fillText(`Score: ${points}`, 10, 50)
 }
 
 const drawCircle = () => {
@@ -27,25 +52,73 @@ const drawCircle = () => {
     }
 
     ctx.beginPath()
-    ctx.arc(circleX + x, circleY + y, 50, 0, 2 * Math.PI)
-    circleX += x
-    circleY += y
+    let newX = circleX + x, newY = circleY + y
+
+    if (newX < 0)
+      newX = width
+    if (newX > width)
+      newX = 0
+    if (newY < 0)
+      newY = height
+    if (newY > height)
+      newY = 0
+
+    ctx.arc(newX, newY, 20, 0, 2 * Math.PI)
+    circleX = newX
+    circleY = newY
     ctx.stroke()
   }
-  window.requestAnimationFrame(drawCircle)
+}
+
+const dateDiff = (date1, date2) => {
+  return date1.getTime() - date2.getTime()
+}
+
+const animateCanvas = () => {
+  ctx.clearRect(0, 0, width, height)
+
+  if (timer === 20) {
+    timer = 20
+    for (let i = 0; i < 5; i++) {
+      const rectX = Math.floor(Math.random() * width - 50), rectY = Math.floor(Math.random() * height - 50)
+      rectArr[i] = {id: i, x: rectX, y: rectY, touched: false}
+    }
+    timer--
+  }
+
+  drawCircle()
+
+  for (let i = 0; i < 5; i++) {
+    if (timer > 0)
+      ctx.fillStyle = '#3aee08'
+    else
+      ctx.fillStyle = '#ee000d'
+    ctx.fillRect(rectArr[i].x, rectArr[i].y, 50, 50)
+  }
+
+  HUD()
+
+  const newTime = new Date
+  if (dateDiff(newTime, curTime) > 1000) {
+    timer--
+    curTime = newTime
+  }
+
+  if (timer === -5)
+    timer = 20
+
+  window.requestAnimationFrame(animateCanvas)
 }
 
 const canvasInit = () => {
   let canvas = document.getElementById('game')
+  width = canvas.width
+  height = canvas.height
   circleX = canvas.width / 2
   circleY = canvas.height / 2
   ctx = canvas.getContext('2d')
 
-  ctx.beginPath()
-  ctx.arc(circleX, circleY, 50, 0, 2 * Math.PI)
-  ctx.stroke()
-
-  drawRect(ctx)
+  window.requestAnimationFrame(animateCanvas)
 }
 
 window.onload = canvasInit
