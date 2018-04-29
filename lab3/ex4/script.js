@@ -1,5 +1,4 @@
 // 0 - left, 1 - up, 2 - right, 3 - down
-const audio = new Audio('WOO.mp3')
 let keyDown = null
 let width, height
 let circleX, circleY
@@ -8,7 +7,7 @@ let points = 0
 let timer = 20
 let globalTimer = 60
 let curTime = new Date, curGlobalTime = new Date
-let gameMode = 3
+let gameMode = 1
 
 let rectArr = []
 
@@ -21,6 +20,13 @@ const check = (e) => {
 const checkPoints = () => {
   rectArr.forEach(rect => {
     if (circleX <= rect.x + 50 && circleX >= rect.x && circleY <= rect.y + 50 && circleY >= rect.y && !rect.touched) {
+      let audio
+      if(gameMode === 1)
+        audio = new Audio('gachi1.mp3')
+      if(gameMode === 2)
+        audio = new Audio('gachi3.mp3')
+      if(gameMode === 3)
+        audio = new Audio('gachi2.mp3')
       audio.play()
       const tmpId = rect.id
       points += timer
@@ -118,7 +124,7 @@ const animateCanvas = () => {
   else if (globalTimer === 40 && gameMode !== 3)
     gameMode = 3
 
-  if (globalTimer !== 0)
+  if (globalTimer >= 0)
     window.requestAnimationFrame(animateCanvas)
 }
 
