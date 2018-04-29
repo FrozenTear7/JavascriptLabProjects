@@ -6,7 +6,9 @@ let circleX, circleY
 let ctx
 let points = 0
 let timer = 20
-let curTime = new Date
+let globalTimer = 60
+let curTime = new Date, curGlobalTime = new Date
+let gameMode = 3
 
 let rectArr = []
 
@@ -33,22 +35,21 @@ const checkPoints = () => {
 const HUD = () => {
   checkPoints()
 
-  ctx.fillStyle = '#000000'
-  ctx.font = '15px Arial'
-  ctx.fillText(`Score: ${points}`, 10, 50)
+  document.getElementById('score').innerHTML = points
+  document.getElementById('time').innerHTML = globalTimer
 }
 
 const drawCircle = () => {
   if (keyDown) {
     let x = 0, y = 0
     if (keyDown === 1) {
-      x = -5
+      x = -5 * gameMode
     } else if (keyDown === 2) {
-      y = -5
+      y = -5 * gameMode
     } else if (keyDown === 3) {
-      x = 5
+      x = 5 * gameMode
     } else if (keyDown === 4) {
-      y = 5
+      y = 5 * gameMode
     }
 
     ctx.beginPath()
@@ -79,7 +80,7 @@ const animateCanvas = () => {
 
   if (timer === 20) {
     timer = 20
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5 * gameMode; i++) {
       const rectX = Math.floor(Math.random() * width - 50), rectY = Math.floor(Math.random() * height - 50)
       rectArr[i] = {id: i, x: rectX, y: rectY, touched: false}
     }
@@ -88,7 +89,7 @@ const animateCanvas = () => {
 
   drawCircle()
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5 * gameMode; i++) {
     if (timer > 0)
       ctx.fillStyle = '#3aee08'
     else
@@ -99,7 +100,12 @@ const animateCanvas = () => {
   HUD()
 
   const newTime = new Date
-  if (dateDiff(newTime, curTime) > 1000) {
+  if (dateDiff(newTime, curGlobalTime) > 1000) {
+    globalTimer--
+    curGlobalTime = newTime
+  }
+
+  if (dateDiff(newTime, curTime) > 1000 / gameMode) {
     timer--
     curTime = newTime
   }
@@ -107,7 +113,13 @@ const animateCanvas = () => {
   if (timer === -5)
     timer = 20
 
-  window.requestAnimationFrame(animateCanvas)
+  if (globalTimer === 20 && gameMode !== 2)
+    gameMode = 2
+  else if (globalTimer === 40 && gameMode !== 3)
+    gameMode = 3
+
+  if (globalTimer !== 0)
+    window.requestAnimationFrame(animateCanvas)
 }
 
 const canvasInit = () => {
