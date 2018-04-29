@@ -46,7 +46,7 @@ const launchFunctions = () => {
 
   funIntervalHandler = setInterval(funInterval, 1000)
   //funTimeoutHandler = window.setTimeout(funTimeout, 1000)
-  //window.requestAnimationFrame(funRequest)
+  window.requestAnimationFrame(funRequest)
   funRequestHandler = true
 }
 
