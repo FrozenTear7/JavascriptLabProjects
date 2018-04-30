@@ -1,0 +1,7 @@
+{
+  "name": "lab4",
+  "version": "0.0.1",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
