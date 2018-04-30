@@ -8,6 +8,8 @@ let timer = 20
 let globalTimer = 60
 let curTime = new Date, curGlobalTime = new Date
 let gameMode = 1
+let newNick
+let scores = [{nick: 'xd', score: 100}, {nick: 'szpenus', score: 200}]
 
 let rectArr = []
 
@@ -20,13 +22,7 @@ const check = (e) => {
 const checkPoints = () => {
   rectArr.forEach(rect => {
     if (circleX <= rect.x + 50 && circleX >= rect.x && circleY <= rect.y + 50 && circleY >= rect.y && !rect.touched) {
-      let audio
-      if(gameMode === 1)
-        audio = new Audio('gachi1.mp3')
-      if(gameMode === 2)
-        audio = new Audio('gachi3.mp3')
-      if(gameMode === 3)
-        audio = new Audio('gachi2.mp3')
+      let audio = new Audio('gachi1.mp3')
       audio.play()
       const tmpId = rect.id
       points += timer
@@ -43,6 +39,7 @@ const HUD = () => {
 
   document.getElementById('score').innerHTML = points
   document.getElementById('time').innerHTML = globalTimer
+  document.getElementById('timer').innerHTML = timer
 }
 
 const drawCircle = () => {
@@ -96,11 +93,17 @@ const animateCanvas = () => {
   drawCircle()
 
   for (let i = 0; i < 5 * gameMode; i++) {
-    if (timer > 0)
-      ctx.fillStyle = '#3aee08'
-    else
-      ctx.fillStyle = '#ee000d'
-    ctx.fillRect(rectArr[i].x, rectArr[i].y, 50, 50)
+    if (rectArr[i]) {
+      if (!rectArr[i].touched) {
+        if (timer > 0)
+          ctx.fillStyle = '#3aee08'
+        else
+          ctx.fillStyle = '#ee000d'
+      } else
+        ctx.fillStyle = '#000000'
+
+      ctx.fillRect(rectArr[i].x, rectArr[i].y, 50, 50)
+    }
   }
 
   HUD()
@@ -119,22 +122,53 @@ const animateCanvas = () => {
   if (timer === -5)
     timer = 20
 
-  if (globalTimer === 20 && gameMode !== 2)
-    gameMode = 2
-  else if (globalTimer === 40 && gameMode !== 3)
+  if (globalTimer === 20 && gameMode !== 3)
     gameMode = 3
+  else if (globalTimer === 40 && gameMode !== 2)
+    gameMode = 2
 
   if (globalTimer >= 0)
     window.requestAnimationFrame(animateCanvas)
+  else {
+    scores = [...scores, {nick: newNick, score: points}]
+    scores = scores.sort((a, b) => b.score - a.score)
+
+    for (let i = 0; i < 3; i++) {
+      if (scores[i]) {
+        document.getElementById(`best${i + 1}name`).innerHTML = scores[i].nick
+        document.getElementById(`best${i + 1}score`).innerHTML = scores[i].score
+      }
+    }
+  }
 }
 
 const canvasInit = () => {
   let canvas = document.getElementById('game')
+  ctx = canvas.getContext('2d')
+}
+
+const startGame = () => {
+  points = 0
+  timer = 20
+  globalTimer = 60
+  curTime = new Date
+  curGlobalTime = new Date
+  gameMode = 1
+  newNick = document.forms['launchGame'].elements[0].value
+
   width = canvas.width
   height = canvas.height
   circleX = canvas.width / 2
   circleY = canvas.height / 2
-  ctx = canvas.getContext('2d')
+
+  scores = scores.sort((a, b) => b.score - a.score)
+
+  for (let i = 0; i < 3; i++) {
+    if (scores[i]) {
+      document.getElementById(`best${i + 1}name`).innerHTML = scores[i].nick
+      document.getElementById(`best${i + 1}score`).innerHTML = scores[i].score
+    }
+  }
 
   window.requestAnimationFrame(animateCanvas)
 }

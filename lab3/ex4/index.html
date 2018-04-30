@@ -12,10 +12,39 @@
     <script src="script.js"></script>
 </head>
 <body style="text-align: center">
+<form name="launchGame" class="form-group">
+    <label for="name">Nick:</label>
+    <input id="name" type="text" name="name">
+    <button type="button" onclick=startGame()>Start</button>
+</form>
 <table>
     <tr>
-        <th>Score: <div id="score"></div></th>
-        <th>Time left: <div id="time"></div></th>
+        <th>Score:
+            <div id="score"></div>
+        </th>
+        <th>Time left:
+            <div id="time"></div>
+        </th>
+        <th>Timer:
+            <div id="timer"></div>
+        </th>
+    </tr>
+    <tr>
+        <th>Best scores:</th>
+    </tr>
+    <tr>
+        <th>1.
+            <div id="best1name"></div>
+            <div id="best1score"></div>
+        </th>
+        <th>2.
+            <div id="best2name"></div>
+            <div id="best2score"></div>
+        </th>
+        <th>3.
+            <div id="best3name"></div>
+            <div id="best3score"></div>
+        </th>
     </tr>
 </table>
 <canvas id="game"
