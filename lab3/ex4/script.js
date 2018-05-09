@@ -1,8 +1,10 @@
+let canvas = document.getElementById('game')
+let ctx = canvas.getContext('2d')
+
 // 0 - left, 1 - up, 2 - right, 3 - down
 let keyDown = null
 let width, height
 let circleX, circleY
-let ctx
 let points = 0
 let timer = 20
 let globalTimer = 60
@@ -143,8 +145,10 @@ const animateCanvas = () => {
 }
 
 const canvasInit = () => {
+  console.log('xd')
   let canvas = document.getElementById('game')
   ctx = canvas.getContext('2d')
+  console.log('xd')
 }
 
 const startGame = () => {
@@ -173,7 +177,7 @@ const startGame = () => {
   window.requestAnimationFrame(animateCanvas)
 }
 
-window.onload = canvasInit
+//window.onload = canvasInit
 window.addEventListener('keydown', check, false)
 window.requestAnimationFrame(drawCircle)
 
