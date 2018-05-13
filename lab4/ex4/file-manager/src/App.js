@@ -7,12 +7,10 @@ class App extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-lg-6'>
-            <h2>Window 1<br/><br/></h2>
-            <Files/>
+            <Files window='1'/>
           </div>
           <div className='col-lg-6'>
-            <h2>Window 2<br/><br/></h2>
-            <Files/>
+            <Files window='2'/>
           </div>
         </div>
       </div>
