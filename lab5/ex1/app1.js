@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send(ejs.render('<div><%= x %> + <%= y %> = <%= x + y %></div>', {x: x, y: y}))
 })
 
+app.get('/add/:x/:y', (req, res) => {
+  res.send(ejs.render('<div><%= x %> + <%= y %> = <%= x + y %></div>', {x: +req.params.x, y: +req.params.y}))
+})
+
 app.listen(3000, () => {
   console.log('Aplikacja jest dostępna na porcie 3000')
 })

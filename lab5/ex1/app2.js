@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
   res.render('index', {x: x, y: y})
 })
 
+app.get('/add/:x/:y', (req, res) => {
+  res.render('index', {x: +req.params.x, y: +req.params.y})
+})
+
 app.listen(3000, () => {
   console.log('Aplikacja jest dostępna na porcie 3000')
 })
